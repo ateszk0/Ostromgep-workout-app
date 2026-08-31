@@ -1,4 +1,4 @@
-# Ostromgép Könyvtár: Részletes Használati Útmutató
+# Ostromgép: Részletes Használati Útmutató
 
 Üdvözöl az **Ostromgép**! Ez az alkalmazás azért jött létre, hogy segítsen az edzéseid precíz naplózásában, a fejlődésed követésében és a progresszív túlterhelés (Progressive Overload) tudatos alkalmazásában.
 
@@ -6,109 +6,146 @@
 
 ## 1. Dashboard (Kezdőlap)
 
-A **Dashboard** (Kezdőlap) a főképernyő, ahol egy gyors áttekintést kapsz a jelenlegi állapotodról és a következő tennivalódról.
+A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi állapotodról és a következő tennivalódról. Minden itteni kártya egy átrendezhető widget.
 
--  **Next Mission (Következő küldetés)**: Az alkalmazás javaslatot tesz a következő edzésedre a mentett rutinjaid alapján. Kattints a **„Start Mission”** (Küldetés indítása) gombra az azonnali kezdéshez.
--  **Weekly Battle Log (Heti harci napló)**: Hétfőtől vasárnapig látod a napokat. A kis színes körök jelzik, melyik napon edzettél már a héten.
--  **Ready to Siege (Ostromra kész – Izomregeneráció)**: Ez a hőtérkép mutatja az egyes izomcsoportok fáradtsági szintjét.
-  -  **Green (Zöld)**: Regenerálódott, készen áll a terhelésre.
-  -  **Yellow (Sárga)**: Enyhe fáradtság, érezhető igénybevétel.
-  -  **Red (Piros)**: Erős fáradtság, javasolt a pihentetés az adott izomcsoportnak.
--  **Wall of Fame (Dicsőségfala)**: Itt görgetheted végig a legfrissebb egyéni csúcsaidat (**Personal Records**).
--  **Quick Metrics (Gyors mutatók)**: Kattints a beviteli mezőre a napi testsúlyod rögzítéséhez. A mellette lévő pipa gombbal mentheted el. Az alatta lévő grafikon az elmúlt 7 mérésed trendjét mutatja.
+- **Next Mission (Következő küldetés)**: Az app javasol egy következő edzést a mentett rutinjaid alapján. Kattints a **„Start Mission”** gombra az azonnali kezdéshez.
+- **Weekly Battle Log (Heti harci napló)**: Hétfőtől vasárnapig. A kitöltött kör jelzi, melyik napon edzettél már a héten.
+- **Ready to Siege (Ostromra kész – Izomregeneráció)**: Hőtérkép az egyes izomcsoportok fáradtsági szintjéről.
+  - **Zöld**: Regenerálódott, készen áll a terhelésre.
+  - **Sárga**: Enyhe fáradtság, érezhető igénybevétel.
+  - **Piros**: Erős fáradtság – pihentesd az adott izomcsoportot.
+- **Wall of Fame (Dicsőségfala)**: Végiggörgetheted a legfrissebb egyéni csúcsaidat (**Personal Records**).
+- **Quick Metrics (Gyors mutatók)**: Kattints a beviteli mezőre a napi testsúlyod rögzítéséhez, majd mentsd el a pipa gombbal. Az alatta lévő grafikon az elmúlt 7 mérésed trendjét mutatja.
+- **Edit Layout (Elrendezés szerkesztése)**: A dashboard alján lévő gombbal megnyílik egy párbeszédablak, ahol **átrendezheted** a widgeteket vagy **elrejtheted** azokat, amiket nem használsz.
 
 ---
 
 ## 2. Workout (Edzés) indítása és Rutinok kezelése
 
-A **Workout** (Edzés) fülön (alsó navigáció) választhatsz, hogyan szeretnél mozogni:
+A **Workout** fülön (alsó navigáció) választhatsz, hogyan szeretnél mozogni:
 
--  **Start Empty Workout (Üres edzés indítása)**: Ha nincs fix terved, és ott a helyszínen szeretnéd összeállítani a gyakorlatokat.
--  **My Routines (Saját rutinok)**: Itt találod az általad létrehozott sablonokat. Kattints a kártyáján lévő **„Start Routine”** gombra az indításhoz.
--  **QR kódos importálás/exportálás**: A Rutinok listája felett található **QR ikonnal** tudsz mások által megosztott edzésterveket beolvasni. Saját rutinjaidat a kártyáikon lévő három pont (...) menüben a **Share via QR** opcióval oszthatod meg.
--  **Manage Folders (Mappák kezelése)**: A jobb felső **mappa ikonra** kattintva rendszerezheted a rutinjaidat.
-  -  **Create Folder (Mappa létrehozása)**: A „New Folder” gombbal hozz létre mappát, adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
-  -  **Active Folder (Aktív mappa)**: Ha kiválasztasz egy mappát a listából, a Home képernyőn csak az ahhoz tartozó rutinok fognak megjelenni loopban.
--  **New Routine (Új rutin)**: Ezzel hozhatsz létre egy új, elmenthető edzéstervet (**Routine Editor**).
--  **Explore Routines (Rutinok felfedezése)**: Gyárilag összeállított edzéstervek (pl. Push-Pull-Legs, Full body) közül válogathatsz, amiket a **„Add to my routines”** gombbal menthetsz el magadnak. Ezek abszolút nem tökéletes rutinok csak kitöltésre vannak ideiglenesen.
+- **Start Empty Workout (Üres edzés indítása)**: Nincs fix terv – ott helyben állítod össze a gyakorlatokat.
+- **My Routines (Saját rutinok)**: Az általad létrehozott sablonok. Kattints a kártya **„Start Routine”** gombjára az indításhoz.
+- **QR kódos importálás/exportálás**: A rutinlista feletti **QR ikonnal** olvashatsz be mások által megosztott terveket. Saját rutinjaidat a kártya három pont (⋯) menüjében a **Share via QR** opcióval oszthatod meg. A szerializáció adat-agnosztikus, így a teljesen egyedi, saját gyakorlataid is gond nélkül átkerülnek.
+- **Manage Rotations (Rotációk kezelése)**: A jobb felső **rotáció ikonnal** (körkörös nyilak) csoportosíthatod a körbejárt rutinjaidat.
+  - **Create Rotation (Rotáció létrehozása)**: Adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
+  - **Active Rotation (Aktív rotáció)**: Ha kiválasztasz egy rotációt, a dashboard **Next Mission** widgetjében már csak az ahhoz tartozó rutinok forognak.
+- **New Routine (Új rutin)**: Új, elmenthető edzésterv a **Routine Editor**-ban (gyakorlatok, alapértelmezett ismétlésszám, szuperszettek).
+- **Explore Routines (Rutinok felfedezése)**: Kétfüles képernyő. Az egyik fülön gyárilag összeállított tervek (Push-Pull-Legs, Full Body, …), amiket az **„Add to my routines”** gombbal menthetsz – ezek csak ideiglenes kitöltők, nem tökéletes programok. A másik fül az **AI Workout Generator** (lásd 7. pont).
+- **Training Block**: Megnyitja a periodizáció-tervezőt (lásd 8. pont).
 
 ---
 
-## 3. Active Workout (Aktív edzés) folyamata
+## 3. Active Workout (Aktív edzés)
 
-Amikor elindítasz egy edzést, az alábbi eszközök állnak rendelkezésedre a naplózáshoz:
+Amikor elindítasz egy edzést, az alábbi eszközök állnak rendelkezésre:
+
+### Felső sáv
+- **Simple view kapcsoló** (lista / teljes képernyő ikon): vált a teljes sorozattáblázat és egy zavartalan **Simple view** között, ami egyszerre egy szettet mutat, és lapozhatsz köztük.
+- **Plate Calculator** (számológép ikon): adj meg egy cél- és rúdsúlyt, és megmondja, milyen tárcsákat rakj fel oldalanként.
+- **AI Assistant** (robot ikon): menü, ahol **súlyjavaslatot** kérhetsz az aktuális gyakorlatokra, vagy generálhatsz egy **dinamikus bemelegítő** vagy **statikus levezető** protokollt – rövid, illusztrált nyújtáslistát erre az edzésre.
 
 ### Workout Stats Header (Edzésstatisztika fejléc)
-A képernyő tetején folyamatosan látod a legfontosabb adatokat: **Duration (Időtartam)**, **Volume (Volumen)** és **Sets (Szettek)**.
+Fent mindig látod: **Duration (Időtartam)**, **Volume (Volumen)**, **Sets (Szettek)**, plusz a pihenőidő visszaszámlálását.
 
 ### Exercise Block (Gyakorlat blokk) interakciók
--  **Thumbnail Image (Miniatűr kép)**: Kattints a gyakorlat melletti kis képre. Ha elérhető hozzá videó, elindul a lejátszás, egyébként a kép nagyítva jelenik meg.
--  **Notes (Jegyzet)**: A gyakorlat neve alatt közvetlenül írhatsz jegyzeteket.
--  **Rest Timer (Pihenőidő)**: Kattints a kis stopperóra melletti időre (pl. „90s”) a fejlécben a módosításhoz.
--  **More Menu (...) (További menü)**: Itt érheted el a **Move Up/Down** (Mozgatás), **Edit** (Szerkesztés), **Superset** (Szuperszett létrehozása) és **Delete** (Törlés) funkciókat.
+- **Miniatűr kép**: kattints a gyakorlat melletti kis képre – ha van hozzá videó, elindul, egyébként a kép nagyítva jelenik meg.
+- **Notes (Jegyzet)**: a gyakorlat neve alatt közvetlenül írhatsz.
+- **Rest Timer (Pihenőidő)**: kattints a pihenősávban az időre a módosításhoz (±15 mp) vagy a kihagyáshoz.
+- **⋯ menü**: **Move Up/Down** (Mozgatás), **Edit** (Szerkesztés), **Create / Remove Superset** (Szuperszett), **Replace exercise** (Csere) és **Delete** (Törlés).
 
-### Sets Table (Sorozatok táblázata) – Működés
--  **Set Number (Szett száma – 1, 2, 3...)**: **KATTINTS A SZÁMRA**, hogy átváltsd **Warmup set** (Bemelegítő sorozat) típusra. Ekkor a sor színe sárgára vált.
--  **Previous (Előző)**: Itt látod a legutóbbi edzésed adatait.
--  **KG / Reps (Súly / Ismétlés)**: Kattints bele a mezőkbe az adatok megadásához.
--  **RPE (Rate of Perceived Exertion – Érzékelt nehézség)**: Kattints a kötőjelre az RPE oszlopban, és válassz a felugró listából (egy adott skálán).
--  **Complete Toggle (Pipa gomb)**: Kattints a szürke négyzetre a sor végén a befejezéshez. Ez indítja el az automatikus pihenőidőt is.
--  **Remove Set (Sorozat törlése)**: **HÚZD EL BALRA** (Swipe left) a teljes sorozatot a piros törlés ikon megjelenítéséhez.
+### Sorozatok táblázata
+- **Szett száma (1, 2, 3…)**: **kattints a számra**, hogy **Warmup set**-té (bemelegítő) alakítsd – a sor sárgára vált.
+- **Previous (Előző)**: a legutóbbi adataid ehhez a gyakorlathoz.
+- **KG / Reps (Súly / Ismétlés)**: kattints a mezőkbe az adatokhoz.
+- **RPE**: kattints a kötőjelre az RPE oszlopban, és válassz a felugró listából.
+- **Complete gomb**: kattints a sor végén a négyzetre a szett befejezéséhez – ez indítja az automatikus pihenőidőt is. Ha megdöntöd a korábbi csúcsodat, egy rekord-jelzés villan.
+- **Sorozat törlése**: **húzd el a sort balra** a törléshez.
+
+A szuperszettbe kötött gyakorlatok színes bal szegéllyel és „SUPERSET” felirattal vannak csoportosítva.
 
 ---
 
 ## 4. Exercises (Gyakorlatok) kezelése
 
-A **Profile** fülön éred el az **Exercises** (Gyakorlatok) könyvtárat, ahol a gyakorlatokat kezelheted:
+A **Profile** fülön nyisd meg az **Exercises** könyvtárat:
 
--  **Create Exercise (Gyakorlat létrehozása)**: A jobb felső **„Create”** gombbal adhatsz hozzá saját gyakorlatot. Megadhatod a nevét, az alapértelmezett ismétlési tartományát (**Rep Range**), tölthetsz fel hozzá képet, és kiválaszthatod az érintett izomcsoportokat (**Muscle Groups**) és a szükséges eszközt (**Equipment**).
--  **Edit Exercise (Gyakorlat szerkesztése)**: Kattints bármelyik gyakorlatra a listában vagy az edzés közbeni menüben a módosításhoz.
-  - A saját (Custom) gyakorlatoknál minden adatot (név, kép, izmok) szerkeszthetsz.
-  - Az alapértelmezett gyakorlatoknál biztonsági okokból csak az ismétlési tartományt módosíthatod, a képük fix.
-
----
-
-## 5. Statistics (Statisztika) – Fejlesztés alatt (In Progress)
-
-A **Statistics** (Statisztika) képernyő jelenleg fejlesztés alatt áll, de már számos hasznos adatot mutat:
-
--  **Weekly Heatmap (Heti hőtérkép)**: A képernyő tetején egy 7 napos nézet mutatja, mely napokon edzettél.
--  **Body Visualization (Test vizualizáció)**: Két alak (**Front** és **Back**) mutatja grafikusan, mely izmaidat dolgoztattad meg a héten. (Beta)
--  **Advanced Stats (Haladó statisztikák)**: A gombokra kattintva részletesebb elemzéseket kapsz (pl. **Set Count by Muscle** – Sorozatok száma izomcsoportonként, **Monthly Report** – Havi jelentés).
+- **Create Exercise (Gyakorlat létrehozása)**: a jobb felső **„Create”** gombbal. Add meg a nevét, az alapértelmezett ismétlési tartományát (**Rep Range**), tölts fel képet, és válaszd ki az érintett izomcsoportokat (**Muscle Groups**) és a szükséges eszközt (**Equipment**).
+- **Edit Exercise (Szerkesztés)**: kattints bármelyik gyakorlatra a listában vagy az edzés közbeni menüben.
+  - Saját gyakorlatok: minden adat szerkeszthető (név, kép, izmok, eszköz).
+  - Alapértelmezett gyakorlatok: biztonsági okból csak az ismétlési tartomány módosítható, a kép fix.
 
 ---
 
-## 6. Profile (Profil) és Előzmények
+## 5. Statistics (Statisztika)
 
-A **Profile** fülön követheted a hosszú távú haladásodat:
+A **Statistics** képernyő (Profile fül) egy teljes elemző nézet:
 
--  **Recent Workouts Volume Chart (Utolsó edzések volumene)**: Egy oszlopdiagram mutatja az elmúlt edzéseid összesített volumenét, így láthatod, hogy nő-e a terhelésed az idővel.
--  **Workouts Button (Edzések gomb)**: Erre kattintva a teljes edzésmúltadba (**Workout Log**) jutsz, ahol visszanézheted minden korábbi edzésed részleteit. Újdonság: Kattints egy korábbi edzésedre, és a **AI Evaluation** (AI Értékelés) gombbal utólag is kérhetsz részletes elemzést a teljesítményedről (akár magyarul is!).
--  **Calendar Button (Naptár gomb)**: Naptár nézetben böngészheted a múltat. A ponttal jelölt napokon volt edzésed.
--  **Recent Workouts List**: A képernyő alján az utolsó 5 edzésed kártyáját látod. Kattints bármelyikre a részletekért, vagy hogy **Copy workout** (Edzés másolása) vagy **Save as routine** (Mentés rutinként) funkciókkal újrahasználd őket.
-- **Settings (Beállítások)**: A profilod jobb felső sarkában található fogaskerék ikonnal érheted el. Itt módosíthatod a nevedet, profilképedet, az alkalmazás nyelvét, valamint a téma színét (**Piros, Sárga, Zöld, Kék, Lila**). Ezen a képernyőn állíthatod be a **Machine Weight Steps** (Gép-specifikus súlylépcsők) értékét is, ami segít a pontosabb progresszív túlterhelés (Progressive Overload) javaslatokban az edzések során.
-
----
-
-## 7. AI Workout Generator (AI Edzésterv Generáló – Gemini 3.0 Flash)
-
-Az **Explore Routines** (Rutinok felfedezése) képernyő tetején található az **AI Workout Generator** kártya, amellyel teljesen egyedi, személyre szabott edzésterveket készíthetsz a legmodernebb mesterséges intelligencia segítségével.
-
--  **API Key**: A generátor használatához szükséged lesz egy saját **Gemini API kulcsra**.
-    1. **Kulcs igénylése**: Lépj a [Google AI Studio](https://aistudio.google.com/api-keys) oldalára, jelentkezz be a Google fiókoddal, majd kattints a **'Get API key'** gombra egy új kulcs létrehozásához.
-    2. **Beállítás az appban**: Lépj a **Profile** fülre, kattints a jobb felső sarokban a **Settings** (fogaskerék) ikonra, majd görgess le az **AI (Gemini API Key)** részhez. Illeszd be a kulcsot és mentsd el. Az alkalmazás biztonságosan, titkosítva (**EncryptedSharedPreferences**) tárolja ezt az eszközödön.
--  **Training days per week (Heti edzésnapok)**: A csúszka segítségével állítsd be, hány napot tervezel edzeni egy héten (1-7 nap). Az MI automatikusan javasol egy optimális felosztást (pl. PPL, Upper/Lower, Full Body, Arnold Split) a napiszáma alapján.
--  **Additional preferences (Egyéni preferenciák)**: Ez egy opcionális mező, ahol speciális kéréseket adhatsz meg az MI-nek. Például: *„Vállsérülésem van, fókuszáljunk inkább a lábra és a hátra”*, vagy *„Szeretnék több izolációs gyakorlatot a karokra”*.
--  **Generate Workout Plan (Edzésterv generálása)**: A gomb megnyomása után az MI összeállítja a tervedet a gyári gyakorlattár (**default_exercises.json**) elemeiből, és minden napra külön-külön automatikusan elmenti a rutinokat a **My Routines** (Saját rutinok) listádba. Az AI generálás most már kétnyelvű, így a jegyzeteket az alkalmazás beállított nyelvének megfelelően írja.
+- **Summary (Összegzés)**: Workouts, Volume, Time, Avg. Workout, Longest Streak, This Month.
+- **Last 7 Days**: hőtérkép arról, mely napokon edzettél.
+- **Muscle Group Distribution**: donut-diagram és elöl/hátul testtérkép a mostanában megdolgoztatott izmokról.
+- **Set Distribution**: sorozatszám izomcsoportonként.
+- **Top Exercises**: a legtöbbször végzett gyakorlataid.
+- **Personal Records**: a legnehezebb szett és a legnagyobb volumen gyakorlatonként.
+- **1RM Progression**: válassz egy gyakorlatot, és látod a becsült egyismétléses maximumod (one-rep max) trendjét az időben (Epley / Brzycki becslés). Ehhez néhány naplózott edzés kell az adott gyakorlatból.
+- **Monthly Summary**: havi edzés- és volumen-összegek.
 
 ---
 
-## 8. Automatikus Frissítés és Karbantartás (Auto Updater)
+## 6. Profile (Profil), Előzmények és Beállítások
 
-Az alkalmazás beépített frissítés-ellenőrzővel rendelkezik. Indításkor a háttérben biztonságosan ellenőrzi az alkalmazás hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**). Ha új kiadást (Release) talál:
-- Egy felugró ablakban azonnal értesít az új verzióról.
-- Az **Update** (Frissítés) gombra kattintva a böngésződ a megfelelő GitHub oldalra irányít, ahonnan letöltheted az új `.apk` fájlt.
-- A funkció úgy lett kialakítva, hogy sose akassza meg az edzést: ha nincs internet, némán fut a háttérben.
+A **Profile** fülön:
+
+- **Recent Workouts Volume Chart**: oszlopdiagram az elmúlt edzések összesített volumenéről, hogy lásd, nő-e a terhelésed.
+- **Workouts**: megnyitja a teljes **Workout Log**-ot. Kattints egy korábbi edzésre a részletekért, majd az **AI Evaluation** gombbal kérj utólagos részletes elemzést arról az edzésről (az app nyelvén).
+- **Calendar**: naptár nézetben böngészheted a múltat; a ponttal jelölt napokon volt edzésed, a mai nap körvonalazva van.
+- **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, vagy használd a **Copy workout** / **Save as routine** funkciókat az újrahasznosításhoz.
+- **Settings (Beállítások)** (fogaskerék ikon): kártyákra bontott képernyő:
+  - **Appearance**: név, profilkép, app nyelve, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
+  - **Timer**: a pihenőidő rezgése, hangereje és hangja.
+  - **Focus Mode (App Blocker)**: felület, ami visszaterel az edzéshez, ha más appot nyitnál meg közben.
+  - **Data & Cloud Sync**: Google fiókkal (Firebase) belépve mentheted és visszaállíthatod az előzményeket, sablonokat és a könyvtárat. **Teljes adat export/import JSON-ként**, vagy **Import CSV** egy **Hevy** edzés-export beolvasásához.
+  - **AI (Gemini API Key)**: illeszd be a kulcsod (titkosítva, az eszközön tárolva).
+  - **Cable Presets**: mentsd el a csigás gépekhez használt gyakori súlybeállításokat a gyorsabb naplózáshoz.
+
+---
+
+## 7. AI Workout Generator (Gemini 3 Flash)
+
+Az **Explore Routines** képernyő **AI Workout Generator** fülén készíthetsz egyedi, személyre szabott terveket.
+
+- **API Key**: szükséged lesz egy saját **Gemini API kulcsra**.
+  1. **Kulcs igénylése**: nyisd meg a [Google AI Studio](https://aistudio.google.com/api-keys) oldalt, jelentkezz be, és hozz létre egy kulcsot.
+  2. **Beállítás az appban**: Profile → **Settings** (fogaskerék) → **AI (Gemini API Key)** – illeszd be és mentsd. Biztonságosan, titkosítva (**EncryptedSharedPreferences**) tárolódik az eszközödön.
+- **Training days per week (Heti edzésnapok)**: csúszka (1–7). Az MI a napok számához illő felosztást választ (PPL, Upper/Lower, Full Body, Arnold Split, …).
+- **Additional preferences (Egyéni preferenciák)** (opcionális): szabad szöveg, pl. *„Vállsérülésem van, fókuszáljunk inkább a lábra és a hátra”* vagy *„Több izolációs gyakorlatot a karokra”*.
+- **Generate Workout Plan**: az MI a gyári gyakorlattárból (**default_exercises.json**) állítja össze a tervet, és minden napra külön rutint ment a **My Routines** listádba. A jegyzeteket az app beállított nyelvén írja.
+
+---
+
+## 8. Training Block (Periodizáció)
+
+A **Training Block** képernyő egy rutinból strukturált, több hetes mezociklust csinál.
+
+**Egy blokk tervezése:**
+- **Forrás**: *Use existing routines* (válassz egy rutin-rotációt – a rutinjai lesznek az edzésnapok) vagy *Generate with AI* (írd le, mit szeretnél, és az MI elkészíti a felosztást).
+- **Block length**: 4–8 hét.
+- **Deload every N weeks**: milyen gyakran ékelődik be egy könnyebb regenerációs hét (az utolsó hét mindig deload).
+- **Extra sets per week**: mennyire agresszíven növekszik a munkaszettek volumene minden nem-deload cikluson belül.
+
+**Hogyan fut:** az app hétről hétre felépíti a tervet. A munka- (nem bemelegítő) szettek száma hétről hétre nő egy cikluson belül, és minden deload után nullázódik; a deload hetek nagyjából felére vágják a munkaszett-volument, és **DELOAD** jelzést kapnak. A blokk-képernyőn látod a **Week X / Y** állást, és onnan indíthatod az aktuális hét edzését. A bemelegítő szetteket sosem skálázza.
+
+A blokkot bármikor törölheted, hogy visszatérj a normál rutin-edzéshez.
+
+---
+
+## 9. Automatikus Frissítés és Karbantartás
+
+Az app indításkor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**):
+
+- Egy felugró ablak értesít az új verzióról.
+- Az **Update** gomb a böngésződben megnyitja a release oldalt az új `.apk` letöltéséhez. Előtte exportáld az adataidat.
+- Sose akasztja meg az edzést: internet nélkül némán fut a háttérben.
 
 ---
 
