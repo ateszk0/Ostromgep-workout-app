@@ -120,6 +120,12 @@ Az **Explore Routines** képernyő **AI Workout Generator** fülén készíthets
 - **Training days per week (Heti edzésnapok)**: csúszka (1–7). Az MI a napok számához illő felosztást választ (PPL, Upper/Lower, Full Body, Arnold Split, …).
 - **Additional preferences (Egyéni preferenciák)** (opcionális): szabad szöveg, pl. *„Vállsérülésem van, fókuszáljunk inkább a lábra és a hátra”* vagy *„Több izolációs gyakorlatot a karokra”*.
 - **Generate Workout Plan**: az MI a gyári gyakorlattárból (**default_exercises.json**) állítja össze a tervet, és minden napra külön rutint ment a **My Routines** listádba. A jegyzeteket az app beállított nyelvén írja.
+-  **API Key**: A generátor használatához szükséged lesz egy saját **Gemini API kulcsra**.
+    1. **Kulcs igénylése**: Lépj a [Google AI Studio]([https://aistudio.google.com/](https://aistudio.google.com/api-keys)) oldalára, jelentkezz be a Google fiókoddal, majd kattints a **'Get API key'** gombra egy új kulcs létrehozásához.
+    2. **Beállítás az appban**: Lépj a **Profile** fülre, kattints a jobb felső sarokban a **Settings** (fogaskerék) ikonra, majd görgess le az **AI (Gemini API Key)** részhez. Illeszd be a kulcsot és mentsd el. Az alkalmazás biztonságosan, titkosítva (**EncryptedSharedPreferences**) tárolja ezt az eszközödön.
+-  **Training days per week (Heti edzésnapok)**: A csúszka segítségével állítsd be, hány napot tervezel edzeni egy héten (1-7 nap). Az MI automatikusan javasol egy optimális felosztást (pl. PPL, Upper/Lower, Full Body, Arnold Split) a napiszáma alapján.
+-  **Additional preferences (Egyéni preferenciák)**: Ez egy opcionális mező, ahol speciális kéréseket adhatsz meg az MI-nek. Például: *„Vállsérülésem van, fókuszáljunk inkább a lábra és a hátra”*, vagy *„Szeretnék több izolációs gyakorlatot a karokra”*.
+-  **Generate Workout Plan (Edzésterv generálása)**: A gomb megnyomása után az MI összeállítja a tervedet a gyári gyakorlattár (**default_exercises.json**) elemeiből, és minden napra külön-külön automatikusan elmenti a rutinokat a **My Routines** (Saját rutinok) listádba. Az AI generálás most már kétnyelvű, így a jegyzeteket az alkalmazás beállított nyelvének megfelelően írja.
 
 ---
 

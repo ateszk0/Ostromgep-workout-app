@@ -4,7 +4,7 @@
 
 ## Key Features
 
-- **AI Workout Generator & Evaluation**: Powered by **Gemini 3 Flash**, the app generates personalized multi-day routines, suggests starting weights from your history, produces dynamic warm-up / static cooldown protocols with illustrated stretches, and writes a bilingual post-workout analysis into your log.
+- **AI Workout Generator & Evaluation**: Powered by **Google Gemini** (via a Cloudflare Worker proxy, or your own API key), the app generates personalized multi-day routines, suggests starting weights from your history, produces dynamic warm-up / static cooldown protocols with illustrated stretches, and writes a bilingual post-workout analysis into your log.
 - **Training Blocks (Periodization)**: Plan a 4–8 week mesocycle with automatic deload weeks. Choose block length, deload frequency, and a weekly set-volume ramp; the app builds a week-by-week plan from an existing routine rotation or an AI-generated split, scales working sets each week, and halves them on deload weeks.
 - **Advanced Set Tracking**: Log sets, reps, weight and RPE with a fast table UI. Supersets, warm-up sets, a swipe-to-delete gesture, and a distraction-free **Simple view** for one-set-at-a-time logging.
 - **Progressive Overload**: AI weight suggestions based on prior performance, machine-specific weight-increment settings, **Cable Machine Presets**, and an in-workout **Plate Calculator**.
@@ -28,7 +28,7 @@
 ## Tech Stack
 
 - **Jetpack Compose** + **Material 3** — the entire UI, with a custom design-system layer (`OstromgepTheme`, semantic color/type/shape/spacing tokens, reusable primitives).
-- **Gemini 3 Flash** via the Google AI client SDK (`com.google.ai.client.generativeai`) — AI generation and evaluation.
+- **Google Gemini** (`gemini-3.6-flash`) via the Google AI client SDK (`com.google.ai.client.generativeai`) and a Cloudflare Worker proxy — AI generation and evaluation.
 - **Firebase** (Auth + Firestore) — Google sign-in and cloud sync.
 - **Room** — local persistence for the collections that grow with use (history, templates, exercise library, routine rotations, body-weight log, cable presets, training blocks).
 - **Media3 ExoPlayer** — exercise-demo video playback.

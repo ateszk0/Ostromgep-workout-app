@@ -1,4 +1,4 @@
-# Ostromgep: Detailed User Guide
+# Ostromgép: Detailed User Guide
 
 Welcome to **Ostromgep**! This application was created to help you precisely log your workouts, track your progress, and consciously apply Progressive Overload.
 
@@ -136,6 +136,12 @@ The **Training Block** screen turns a routine into a structured multi-week mesoc
 **How it runs:** the app generates a week-by-week plan. Working (non-warm-up) sets scale up each week within a cycle and reset after each deload; deload weeks cut working-set volume roughly in half and are marked with a **DELOAD** badge. From the block screen you see **Week X / Y**, and you start the current week's workout straight from there. Warm-up sets are never scaled.
 
 Delete the block at any time to return to normal routine training.
+- **API Key**: To use the generator, you will need your own **Gemini API key**.
+    1. **Obtaining a Key**: Visit [Google AI Studio]([https://aistudio.google.com/](https://aistudio.google.com/api-keys)), sign in with your Google account, and click the **'Get API key'** button to create a new key.
+    2. **Setup in the app**: Go to the **Profile** tab, click the **Settings** (gear) icon in the top right, and scroll down to the **AI (Gemini API Key)** section. Paste the key and save it. The app stores this securely and encrypted (**EncryptedSharedPreferences**) on your device.
+- **Training days per week**: Use the slider to set how many days you plan to work out in a week (1-7 days). The AI will automatically suggest an optimal split (e.g., PPL, Upper/Lower, Full Body, Arnold Split) based on the number of days.
+- **Additional preferences**: This is an optional field where you can provide specific requests to the AI. For example: *"I have a shoulder injury, let's focus more on legs and back"*, or *"I want more isolation exercises for arms"*.
+- **Generate Workout Plan**: After pressing the button, the AI will assemble your plan from the elements of the factory exercise library (**default_exercises.json**) and automatically save the routines for each day separately in your **My Routines** list. The AI generation is now bilingual, so it writes notes according to the app's set language.
 
 ---
 
