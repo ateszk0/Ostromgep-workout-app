@@ -1,11 +1,11 @@
 ---
 permalink: /privacy/hu/
-title: Ostromgep — Adatvédelmi tájékoztató
+title: Ostromgep - Adatvédelmi tájékoztató
 ---
 
-# Ostromgep — Adatvédelmi tájékoztató
+# Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-09-01 • Tervezet — közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-09-01 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -52,12 +52,12 @@ edzés utáni elemzés szöveget küldenek a **Google Gemini API**-jának.
   API-kulcsot; a visszaélések korlátozásához rövid ideig (kb. 24 óra) az
   IP-címedet is eltárolja.
 - **Mi kerül elküldésre:** a kéréshez tartozó gyakorlat-/edzésadat, az opcionális
-  „egyéni kérés” mezőbe írt szöveg, és — csak ha bepipálod — a legutóbbi
+  „egyéni kérés” mezőbe írt szöveg, és - csak ha bepipálod - a legutóbbi
   testsúlyod. Kort és magasságot az app nem gyűjt.
 - **Ingyenes szint:** az alapértelmezett út a Gemini ingyenes szintjét
   használja. A Google az ingyenes szinten beküldött tartalmat felhasználhatja a
   modelljei fejlesztésére, és emberek is átnézhetik. Ha ezt nem szeretnéd, add
-  meg a saját Gemini API-kulcsodat a **Beállítások → AI** menüben — ekkor az app
+  meg a saját Gemini API-kulcsodat a **Beállítások → AI** menüben - ekkor az app
   közvetlenül hívja a Geminit, és a kulcsodra a Google fizetős szintű feltételei
   vonatkoznak (nincs tréningfelhasználás).
 - Az AI kimenete generált szöveg, tévedhet. Nem orvosi vagy táplálkozási tanács.

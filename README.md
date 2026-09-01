@@ -28,7 +28,7 @@
 ## Tech Stack
 
 - **Jetpack Compose** + **Material 3** — the entire UI, with a custom design-system layer (`OstromgepTheme`, semantic color/type/shape/spacing tokens, reusable primitives).
-- **Google Gemini** (`gemini-3.6-flash`) via the Google AI client SDK (`com.google.ai.client.generativeai`) and a Cloudflare Worker proxy — AI generation and evaluation.
+- **Google Gemini** (`gemini-3.6-flash`) via the Google AI client SDK (`com.google.ai.client.generativeai`) and a Cloudflare Worker proxy - AI generation and evaluation.
 - **Firebase** (Auth + Firestore) — Google sign-in and cloud sync.
 - **Room** — local persistence for the collections that grow with use (history, templates, exercise library, routine rotations, body-weight log, cable presets, training blocks).
 - **Media3 ExoPlayer** — exercise-demo video playback.

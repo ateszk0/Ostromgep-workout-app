@@ -1,11 +1,11 @@
 ---
 permalink: /privacy/en/
-title: Ostromgep — Privacy Policy
+title: Ostromgep - Privacy Policy
 ---
 
-# Ostromgep — Privacy Policy
+# Ostromgep - Privacy Policy
 
-_Last updated: 2026-09-01 • Draft — review with a lawyer before publishing._
+_Last updated: 2026-09-01 • Draft - review with a lawyer before publishing._
 
 **Controller:** Attila Nagy, ostromgep@atisn.com.
 This is a personal fitness-tracking app for adults. It is not intended for children under 16.
@@ -51,12 +51,12 @@ post-workout analysis send text to **Google's Gemini API**.
   (Cloudflare Workers), which forwards it to Gemini. The proxy holds the API
   key; it also briefly stores your IP address (about 24 hours) to limit abuse.
 - **What is sent:** the exercise/workout data relevant to the request, any text
-  you type in the optional "additional preferences" box, and — only if you tick
-  the box — your latest body weight. Age and height are not collected by the app.
+  you type in the optional "additional preferences" box, and - only if you tick
+  the box - your latest body weight. Age and height are not collected by the app.
 - **Free-tier note:** the default path uses Gemini's free tier. Google may use
   content submitted on the free tier to improve their models, and it may be
   reviewed by humans. If you do not want this, enter your own Gemini API key in
-  **Settings → AI** — the app then calls Gemini directly and Google's paid-tier
+  **Settings → AI** - the app then calls Gemini directly and Google's paid-tier
   terms (no training use) apply to your key.
 - AI output is generated text and can be wrong. It is not medical or nutrition advice.
 - Processors: Google (Gemini), Cloudflare (proxy).
