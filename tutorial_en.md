@@ -14,9 +14,14 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
   - **Green**: Recovered, ready for load.
   - **Yellow**: Mild fatigue, noticeable exertion.
   - **Red**: Strong fatigue — rest that muscle group.
-- **Wall of Fame**: Scroll through your latest **Personal Records**.
 - **Quick Metrics**: Tap the input field to record your daily body weight, then save it with the check button. The chart below shows the trend of your last 7 measurements.
-- **Edit Layout**: The button at the bottom of the dashboard opens a dialog where you can **reorder** the widgets or **hide** ones you don't use.
+- **Today's Workout**: Let the AI build a full session from your recent training with one tap.
+- **Campaign**: Your level, XP bar, weekly streak, quest progress and league tier at a glance — tap it (or the trophy icon top-right) to open the full **Campaign** screen (see section 6).
+- **Training Block**: If you have an active periodization block, shows the current week and a **DELOAD** badge on recovery weeks. Empty if you have not started one.
+- **Stalled Lifts**: Exercises whose estimated max has not moved in a while, each with a coaching hint (deload / check technique / try a variation / add volume). Empty if nothing is currently stalled.
+- **Fresh Conquests**: Your personal records from the last 30 days, labelled with what kind of record it is (max weight or session volume) and how long ago you set it.
+- **Siege Watch**: A live miniature of your castle from this week's siege — tap it to jump into the Campaign screen.
+- **Edit Layout**: The button at the bottom of the dashboard opens a dialog where you can **reorder** the widgets or **hide** ones you don't use. The list scrolls if it does not fit the screen.
 
 ---
 
@@ -31,8 +36,8 @@ On the **Workout** tab (bottom navigation), choose how you want to train:
   - **Create Rotation**: Name it and choose which routines belong to it.
   - **Active Rotation**: Select a rotation and only its routines cycle through the **Next Mission** widget on the dashboard.
 - **New Routine**: Create a new savable plan in the **Routine Editor** (add exercises, set default reps, build supersets).
-- **Explore Routines**: A two-tab screen. One tab has pre-assembled plans (Push-Pull-Legs, Full Body, …) you can save with **"Add to my routines"** — these are placeholders, not perfect programs. The other tab is the **AI Workout Generator** (see section 7).
-- **Training Block**: Opens the periodization planner (see section 8).
+- **Explore Routines**: A two-tab screen. One tab has pre-assembled plans (Push-Pull-Legs, Full Body, …) you can save with **"Add to my routines"** — these are placeholders, not perfect programs. The other tab is the **AI Workout Generator** (see section 8).
+- **Training Block**: Opens the periodization planner (see section 9).
 
 ---
 
@@ -88,11 +93,25 @@ The **Statistics** screen (Profile tab) is a full analytics view:
 - **Top Exercises**: your most-performed movements.
 - **Personal Records**: heaviest set and highest volume per exercise.
 - **1RM Progression**: pick an exercise to see the trend of its estimated one-rep max over time (Epley / Brzycki estimation). Needs a few logged sessions of that exercise.
+- **Stalled Lifts**: exercises whose estimated one-rep max has not improved in a few weeks, each with a hint on what to try (deload, check technique, swap in a variation, or add volume). Tap one to jump to its exercise detail.
 - **Monthly Summary**: per-month workout and volume totals.
 
 ---
 
-## 6. Profile, History and Settings
+## 6. The Campaign (Hadjárat)
+
+Tap the trophy icon top-right on the Dashboard (or the Campaign widget) to open the **Campaign** screen — a siege-themed gamification layer computed entirely from your workout history. Tap the **(i)** info icon at the top for the full in-app guide with exact formulas; here is the short version.
+
+- **XP and Levels**: every finished workout earns XP (a base amount, a volume bonus, a bonus for every personal record you beat, all scaled up by your weekly streak). Level up as XP adds up.
+- **This Week's Siege**: each week is a raid on a castle. The castle's HP is your own recent weekly volume target, so the castle's **size** scales with it too — from a small Outpost or Fort up to a full towered Citadel for a large target. Log volume during the week to damage it: 50% breaches the gate, 100% takes the keep, and 150% is a full overrun (the castle raises a white flag). The walls and towers visibly crumble as you progress, never quite the same way twice.
+- **Weekly Quests**: 3 rotating challenges each week (train N times, beat a PR, hit a volume or set goal, train several muscle groups, a long session, training early in the week). Clearing all 3 earns bonus XP.
+- **League and Season**: a season is one calendar month. Your league score comes from consistency — workouts, active weeks, and your streak, not raw strength — so it stays fair for beginners. Climb from Copper through Bronze, Silver, Gold, Platinum, up to Diamond. Tap the League card for a full ladder showing your distance to every tier.
+- **Badges**: 34 achievements sorted Bronze → Platinum by difficulty, medal-colored, in a 3-column grid. Tap any badge to see exactly what unlocks it.
+- **Notifications**: a push notification on a league promotion, clearing all weekly quests, and a new badge. Turn it off in **Settings → Reminders → Campaign notifications**.
+
+---
+
+## 7. Profile, History and Settings
 
 On the **Profile** tab:
 
@@ -101,7 +120,7 @@ On the **Profile** tab:
 - **Calendar**: browse the past in a calendar; a dot marks a workout day, and today is outlined.
 - **Recent Workouts list**: cards for your last workouts — tap for details, or use **Copy workout** / **Save as routine** to reuse them.
 - **Settings** (gear icon): a screen grouped into cards:
-  - **Appearance**: name, profile picture, app language, and accent color (**Red, Yellow, Green, Blue, Purple**).
+  - **Appearance**: name, profile picture, app language, **theme (System, Light or Dark)**, and accent color (**Red, Yellow, Green, Blue, Purple**).
   - **Timer**: rest-timer vibration, volume, and sound.
   - **Focus Mode (App Blocker)**: an overlay that reminds you to return to your workout if you open another app mid-session.
   - **Data & Cloud Sync**: sign in with Google (Firebase) to back up and restore history, templates and library. **Export / Import full data as JSON**, or **Import CSV** to bring in a **Hevy** workout export.
@@ -110,7 +129,7 @@ On the **Profile** tab:
 
 ---
 
-## 7. AI Workout Generator (Gemini 3 Flash)
+## 8. AI Workout Generator (Gemini 3 Flash)
 
 The **Explore Routines** screen has an **AI Workout Generator** tab for building unique, personalized plans.
 
@@ -123,7 +142,7 @@ The **Explore Routines** screen has an **AI Workout Generator** tab for building
 
 ---
 
-## 8. Training Block (Periodization)
+## 9. Training Block (Periodization)
 
 The **Training Block** screen turns a routine into a structured multi-week mesocycle.
 
@@ -145,7 +164,7 @@ Delete the block at any time to return to normal routine training.
 
 ---
 
-## 9. Auto Updater & Maintenance
+## 10. Auto Updater & Maintenance
 
 The app checks its official GitHub page (**ateszk0/Ostromgep-workout-app**) on startup:
 

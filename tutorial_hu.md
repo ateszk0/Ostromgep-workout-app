@@ -14,9 +14,14 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
   - **Zöld**: Regenerálódott, készen áll a terhelésre.
   - **Sárga**: Enyhe fáradtság, érezhető igénybevétel.
   - **Piros**: Erős fáradtság – pihentesd az adott izomcsoportot.
-- **Wall of Fame (Dicsőségfala)**: Végiggörgetheted a legfrissebb egyéni csúcsaidat (**Personal Records**).
 - **Quick Metrics (Gyors mutatók)**: Kattints a beviteli mezőre a napi testsúlyod rögzítéséhez, majd mentsd el a pipa gombbal. Az alatta lévő grafikon az elmúlt 7 mérésed trendjét mutatja.
-- **Edit Layout (Elrendezés szerkesztése)**: A dashboard alján lévő gombbal megnyílik egy párbeszédablak, ahol **átrendezheted** a widgeteket vagy **elrejtheted** azokat, amiket nem használsz.
+- **Today's Workout (Mai edzés)**: Egy koppintással az MI összeállít egy teljes edzést a közelmúltad alapján.
+- **Campaign (Hadjárat)**: Szinted, XP-sávod, heti szériád, küldetéseid és liga-szinted egy pillantásra – koppints rá (vagy a jobb felső trófea ikonra) a teljes **Hadjárat** képernyő megnyitásához (lásd 6. pont).
+- **Training Block (Edzésblokk státusza)**: Ha van aktív periodizációs blokkod, mutatja az aktuális hetet és a **DELOAD** jelzést a regenerációs heteken. Üres, ha még nem indítottál blokkot.
+- **Stalled Lifts (Elakadás-figyelő)**: Gyakorlatok, amelyeknek a becsült maximuma egy ideje nem nőtt, mindegyikhez egy javaslattal (deload / technika ellenőrzése / variáció / több volumen). Üres, ha jelenleg semmi nem stagnál.
+- **Fresh Conquests (Friss hódítások)**: Az elmúlt 30 nap egyéni csúcsai, feltüntetve, hogy milyen típusú rekordról van szó (legnagyobb súly vagy szakasz volumen), és mennyi ideje történt.
+- **Siege Watch (Ostromfigyelő)**: Az e heti ostrom váradnak élő, kicsinyített képe – koppints rá, hogy a Hadjárat képernyőre ugorj.
+- **Edit Layout (Elrendezés szerkesztése)**: A dashboard alján lévő gombbal megnyílik egy párbeszédablak, ahol **átrendezheted** a widgeteket vagy **elrejtheted** azokat, amiket nem használsz. A lista görgethető, ha nem fér ki a képernyőn.
 
 ---
 
@@ -31,8 +36,8 @@ A **Workout** fülön (alsó navigáció) választhatsz, hogyan szeretnél mozog
   - **Create Rotation (Rotáció létrehozása)**: Adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
   - **Active Rotation (Aktív rotáció)**: Ha kiválasztasz egy rotációt, a dashboard **Next Mission** widgetjében már csak az ahhoz tartozó rutinok forognak.
 - **New Routine (Új rutin)**: Új, elmenthető edzésterv a **Routine Editor**-ban (gyakorlatok, alapértelmezett ismétlésszám, szuperszettek).
-- **Explore Routines (Rutinok felfedezése)**: Kétfüles képernyő. Az egyik fülön gyárilag összeállított tervek (Push-Pull-Legs, Full Body, …), amiket az **„Add to my routines”** gombbal menthetsz – ezek csak ideiglenes kitöltők, nem tökéletes programok. A másik fül az **AI Workout Generator** (lásd 7. pont).
-- **Training Block**: Megnyitja a periodizáció-tervezőt (lásd 8. pont).
+- **Explore Routines (Rutinok felfedezése)**: Kétfüles képernyő. Az egyik fülön gyárilag összeállított tervek (Push-Pull-Legs, Full Body, …), amiket az **„Add to my routines”** gombbal menthetsz – ezek csak ideiglenes kitöltők, nem tökéletes programok. A másik fül az **AI Workout Generator** (lásd 8. pont).
+- **Training Block**: Megnyitja a periodizáció-tervezőt (lásd 9. pont).
 
 ---
 
@@ -88,11 +93,25 @@ A **Statistics** képernyő (Profile fül) egy teljes elemző nézet:
 - **Top Exercises**: a legtöbbször végzett gyakorlataid.
 - **Personal Records**: a legnehezebb szett és a legnagyobb volumen gyakorlatonként.
 - **1RM Progression**: válassz egy gyakorlatot, és látod a becsült egyismétléses maximumod (one-rep max) trendjét az időben (Epley / Brzycki becslés). Ehhez néhány naplózott edzés kell az adott gyakorlatból.
+- **Stalled Lifts (Elakadás-figyelő)**: gyakorlatok, amelyeknek a becsült maximuma pár hete nem javult, mindegyikhez egy javaslattal (deload, technika ellenőrzése, variáció beiktatása, vagy több volumen). Koppints rá az adott gyakorlat részleteihez.
 - **Monthly Summary**: havi edzés- és volumen-összegek.
 
 ---
 
-## 6. Profile (Profil), Előzmények és Beállítások
+## 6. A Hadjárat (Campaign)
+
+Koppints a jobb felső trófea ikonra a Dashboardon (vagy a Hadjárat widgetre) a **Hadjárat** képernyő megnyitásához – egy várostrom-témájú, teljes egészében az edzésnaplódból számolt játékosított réteg. A tetején lévő **(i)** infó ikonra koppintva megnyílik a teljes, pontos képleteket tartalmazó útmutató; itt a rövid összefoglaló.
+
+- **XP és szintek**: minden befejezett edzés XP-t ad (alap mennyiség, volumen-bónusz, bónusz minden megdöntött személyes rekordért, mindezt a heti szériád szorozza fel). A felgyűlt XP-ből szintet lépsz.
+- **E heti ostrom**: minden hét egy roham egy vár ellen. A vár HP-ja a saját, közelmúltbeli heti volumencélod, így a vár **mérete** is ehhez igazodik – kisebb célnál egy szerény őrposzt vagy erőd, nagy célnál egy teljes, tornyos Citadella. Edzés közbeni volumennel sebzed: 50%-nál áttöröd a kaput, 100%-nál beveszed a várat, 150%-nál elsöprő győzelmet aratsz (a vár fehér zászlót tűz ki). A falak és tornyok láthatóan omlanak a haladásoddal, sosem ugyanúgy kétszer.
+- **Heti küldetések**: minden héten 3 forgó kihívás (edzz N-szer, dönts meg egy rekordot, teljesíts egy volumen- vagy szettcélt, eddz több izomcsoportot, egy hosszú edzés, korai heti edzés). Mindhárom teljesítése bónusz XP-t ad.
+- **Liga és szezon**: egy szezon egy naptári hónap. A liga-pontszámod a konzisztenciából jön – edzések, aktív hetek és szériád, nem a nyers erő –, így kezdőknek is fair marad. Emelkedj Réztől Bronzon, Ezüstön, Aranyon, Platinán át egészen Gyémántig. Koppints a Liga kártyára a teljes ranglétráért, ami megmutatja, mennyire vagy az egyes szintektől.
+- **Jelvények**: 34 kitüntetés, nehézség szerint Bronztól Platináig rendezve, éremszínezéssel, 3 oszlopos rácsban. Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
+- **Értesítések**: push értesítés érkezik ligalépéskor, minden heti küldetés teljesítésekor és új jelvénynél. Kikapcsolható: **Beállítások → Emlékeztetők → Hadjárat értesítések**.
+
+---
+
+## 7. Profile (Profil), Előzmények és Beállítások
 
 A **Profile** fülön:
 
@@ -101,7 +120,7 @@ A **Profile** fülön:
 - **Calendar**: naptár nézetben böngészheted a múltat; a ponttal jelölt napokon volt edzésed, a mai nap körvonalazva van.
 - **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, vagy használd a **Copy workout** / **Save as routine** funkciókat az újrahasznosításhoz.
 - **Settings (Beállítások)** (fogaskerék ikon): kártyákra bontott képernyő:
-  - **Appearance**: név, profilkép, app nyelve, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
+  - **Appearance**: név, profilkép, app nyelve, **megjelenés (Rendszer, Világos vagy Sötét)**, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
   - **Timer**: a pihenőidő rezgése, hangereje és hangja.
   - **Focus Mode (App Blocker)**: felület, ami visszaterel az edzéshez, ha más appot nyitnál meg közben.
   - **Data & Cloud Sync**: Google fiókkal (Firebase) belépve mentheted és visszaállíthatod az előzményeket, sablonokat és a könyvtárat. **Teljes adat export/import JSON-ként**, vagy **Import CSV** egy **Hevy** edzés-export beolvasásához.
@@ -110,7 +129,7 @@ A **Profile** fülön:
 
 ---
 
-## 7. AI Workout Generator (Gemini 3 Flash)
+## 8. AI Workout Generator (Gemini 3 Flash)
 
 Az **Explore Routines** képernyő **AI Workout Generator** fülén készíthetsz egyedi, személyre szabott terveket.
 
@@ -129,7 +148,7 @@ Az **Explore Routines** képernyő **AI Workout Generator** fülén készíthets
 
 ---
 
-## 8. Training Block (Periodizáció)
+## 9. Training Block (Periodizáció)
 
 A **Training Block** képernyő egy rutinból strukturált, több hetes mezociklust csinál.
 
@@ -145,7 +164,7 @@ A blokkot bármikor törölheted, hogy visszatérj a normál rutin-edzéshez.
 
 ---
 
-## 9. Automatikus Frissítés és Karbantartás
+## 10. Automatikus Frissítés és Karbantartás
 
 Az app indításkor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**):
 

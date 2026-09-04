@@ -65,9 +65,10 @@ post-workout analysis send text to **Google's Gemini API**.
 
 - **Update check:** on launch the app asks GitHub whether a newer release
   exists. GitHub sees your IP address. No personal data is sent.
-- **Android system backup:** because the app allows Android auto-backup, your
-  local data may be included in your device's Google account backup, governed by
-  Google's terms. Your Gemini API key is excluded from backup.
+- **Android system backup:** the app disables Android's automatic Google cloud
+  backup (`allowBackup=false`), so your local data is not copied to your Google
+  account backup. Move it to a new device with the JSON export or cloud sync.
+  (Direct device-to-device transfer during phone setup can still carry it.)
 
 ## Your rights
 

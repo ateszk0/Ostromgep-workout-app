@@ -67,9 +67,11 @@ edzés utáni elemzés szöveget küldenek a **Google Gemini API**-jának.
 
 - **Frissítés-ellenőrzés:** indításkor az app megkérdezi a GitHubtól, van-e
   újabb kiadás. A GitHub látja az IP-címed. Személyes adat nem megy.
-- **Android rendszer-backup:** mivel az app engedélyezi az Android automatikus
-  mentését, a helyi adataid bekerülhetnek az eszközöd Google-fiók mentésébe, a
-  Google feltételei szerint. A Gemini API-kulcsod ki van zárva a mentésből.
+- **Android rendszer-backup:** az app kikapcsolja az automatikus Google
+  felhő-mentést (`allowBackup=false`), így a helyi adataid nem kerülnek a
+  Google-fiók mentésébe. Új eszközre a JSON exporttal vagy a felhő-synckel
+  viheted át őket. (Készülékek közti közvetlen átvitel a telefonbeállításnál
+  még lehetséges.)
 
 ## A jogaid
 
