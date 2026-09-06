@@ -10,10 +10,11 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
 
 - **Next Mission**: The app suggests your next workout based on your saved routines. Tap **"Start Mission"** to begin immediately.
 - **Weekly Battle Log**: Monday to Sunday. A filled circle marks each day you have already worked out this week.
-- **Ready to Siege (Muscle Recovery)**: A heatmap of how fatigued each muscle group is.
+- **Ready to Siege (Muscle Recovery)**: A heatmap of how fatigued each muscle group is, painted on a front and back body figure.
   - **Green**: Recovered, ready for load.
   - **Yellow**: Mild fatigue, noticeable exertion.
   - **Red**: Strong fatigue — rest that muscle group.
+  - Tap the **gear icon** in the top-right of the card to switch the figure between the **male** and **female** body. The choice is remembered and synced with your account.
 - **Quick Metrics**: Tap the input field to record your daily body weight, then save it with the check button. The chart below shows the trend of your last 7 measurements.
 - **Today's Workout**: Let the AI build a full session from your recent training with one tap.
 - **Campaign**: Your level, XP bar, weekly streak, quest progress and league tier at a glance — tap it (or the trophy icon top-right) to open the full **Campaign** screen (see section 6).
@@ -168,8 +169,9 @@ Delete the block at any time to return to normal routine training.
 
 The app checks its official GitHub page (**ateszk0/Ostromgep-workout-app**) on startup:
 
-- A popup notifies you of a new version.
-- **Update** opens your browser at the release page to download the new `.apk`. Export your data first.
+- A popup notifies you of a new version. Export your data first, just in case.
+- **Download** downloads the matching APK for your build (debug or release) right in the popup, with a progress bar, then **Install** hands it to the system installer - no browser needed. The first time, Android asks you to allow "install unknown apps" for Ostromgép; grant it once and tap Install again.
+- **View on GitHub** is always available too, if you'd rather download it yourself from the release page.
 - It never interrupts a workout: with no internet it stays silent in the background.
 
 ---

@@ -5,7 +5,7 @@ title: Ostromgep - Adatvédelmi tájékoztató
 
 # Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-09-01 • Tervezet - közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-09-06 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -25,7 +25,8 @@ Helyben, egy eszközön lévő adatbázisban és a beállításokban:
 - Rutinok, edzésblokkok, egyéni gyakorlatok, mappák
 - Testsúlynapló (ha használod)
 - A megjelenített neved és (opcionálisan) a profilképed
-- Beállítások (téma, nyelv, emlékeztetők, időzítő, app-blokkoló lista)
+- Beállítások (téma, nyelv, emlékeztetők, időzítő, app-blokkoló lista, és hogy a
+  regenerációs hőtérkép férfi vagy női testalakot rajzol-e)
 - A saját Gemini API kulcsod, ha megadsz egyet (az Android Keystore-ral titkosítva tárolva)
 
 Ez az adat nem kerül sehova, hacsak be nem kapcsolod a felhő-szinkront vagy az AI-funkciókat.
@@ -66,7 +67,10 @@ edzés utáni elemzés szöveget küldenek a **Google Gemini API**-jának.
 ## Egyéb hálózati tevékenység
 
 - **Frissítés-ellenőrzés:** indításkor az app megkérdezi a GitHubtól, van-e
-  újabb kiadás. A GitHub látja az IP-címed. Személyes adat nem megy.
+  újabb kiadás. A GitHub látja az IP-címed. Személyes adat nem megy. Ha a
+  frissítés mellett döntesz, az app le tudja tölteni az új APK-t a GitHubról és
+  átadja az Android csomagtelepítőjének, amit te magad hagysz jóvá; helyette a
+  kiadási oldalt is megnyithatod böngészőben.
 - **Android rendszer-backup:** az app kikapcsolja az automatikus Google
   felhő-mentést (`allowBackup=false`), így a helyi adataid nem kerülnek a
   Google-fiók mentésébe. Új eszközre a JSON exporttal vagy a felhő-synckel
@@ -87,3 +91,8 @@ tiltakozni a kezelés ellen. Ebben az appban:
 ## Változások
 
 A tájékoztató lényeges változásait itt jelezzük, új „utolsó módosítás” dátummal.
+
+- 2026-09-06: rögzítettük, hogy a regenerációs hőtérkép férfi/női testalak-
+  választása a beállítások része (így felhőmentés esetén abba is bekerül), és
+  hogy a frissítés-ellenőrzés mostantól az appon belül le tudja tölteni és
+  telepíteni az új APK-t.

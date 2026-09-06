@@ -10,10 +10,11 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
 
 - **Next Mission (Következő küldetés)**: Az app javasol egy következő edzést a mentett rutinjaid alapján. Kattints a **„Start Mission”** gombra az azonnali kezdéshez.
 - **Weekly Battle Log (Heti harci napló)**: Hétfőtől vasárnapig. A kitöltött kör jelzi, melyik napon edzettél már a héten.
-- **Ready to Siege (Ostromra kész – Izomregeneráció)**: Hőtérkép az egyes izomcsoportok fáradtsági szintjéről.
+- **Ready to Siege (Ostromra kész – Izomregeneráció)**: Hőtérkép az egyes izomcsoportok fáradtsági szintjéről, egy elöl- és egy hátulnézeti testalakra festve.
   - **Zöld**: Regenerálódott, készen áll a terhelésre.
   - **Sárga**: Enyhe fáradtság, érezhető igénybevétel.
   - **Piros**: Erős fáradtság – pihentesd az adott izomcsoportot.
+  - A kártya jobb felső sarkában lévő **fogaskerék ikonra** koppintva válthatsz a **férfi** és a **női** testalak között. A választás megjegyződik, és a fiókoddal szinkronizálódik.
 - **Quick Metrics (Gyors mutatók)**: Kattints a beviteli mezőre a napi testsúlyod rögzítéséhez, majd mentsd el a pipa gombbal. Az alatta lévő grafikon az elmúlt 7 mérésed trendjét mutatja.
 - **Today's Workout (Mai edzés)**: Egy koppintással az MI összeállít egy teljes edzést a közelmúltad alapján.
 - **Campaign (Hadjárat)**: Szinted, XP-sávod, heti szériád, küldetéseid és liga-szinted egy pillantásra – koppints rá (vagy a jobb felső trófea ikonra) a teljes **Hadjárat** képernyő megnyitásához (lásd 6. pont).
@@ -168,8 +169,9 @@ A blokkot bármikor törölheted, hogy visszatérj a normál rutin-edzéshez.
 
 Az app indításkor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**):
 
-- Egy felugró ablak értesít az új verzióról.
-- Az **Update** gomb a böngésződben megnyitja a release oldalt az új `.apk` letöltéséhez. Előtte exportáld az adataidat.
+- Egy felugró ablak értesít az új verzióról. Előtte exportáld az adataidat, a biztonság kedvéért.
+- A **Letöltés** gomb közvetlenül a felugró ablakban letölti a hozzád illő APK-t (debug vagy release, progress-sávval), utána a **Telepítés** átadja a rendszer telepítőjének - nem kell böngésző. Először az Android megkéri, hogy engedélyezd az "ismeretlen appok telepítését" az Ostromgépnek; ezt egyszer engedélyezd, majd nyomd meg újra a Telepítés gombot.
+- A **Megnyitás GitHubon** gomb mindig elérhető is, ha inkább saját magad töltenéd le a release oldalról.
 - Sose akasztja meg az edzést: internet nélkül némán fut a háttérben.
 
 ---

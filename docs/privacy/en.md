@@ -5,7 +5,7 @@ title: Ostromgep - Privacy Policy
 
 # Ostromgep - Privacy Policy
 
-_Last updated: 2026-09-01 • Draft - review with a lawyer before publishing._
+_Last updated: 2026-09-06 • Draft - review with a lawyer before publishing._
 
 **Controller:** Attila Nagy, ostromgep@atisn.com.
 This is a personal fitness-tracking app for adults. It is not intended for children under 16.
@@ -25,7 +25,8 @@ Held locally in an on-device database and app settings:
 - Routines, training blocks, custom exercises, folders
 - Body-weight log (if you use it)
 - Your display name and (optional) profile picture
-- App settings (theme, language, reminders, timer, app-blocker list)
+- App settings (theme, language, reminders, timer, app-blocker list, and
+  whether the recovery heatmap draws a male or female body figure)
 - Your personal Gemini API key, if you enter one (stored encrypted via the Android Keystore)
 
 This data is not sent anywhere unless you enable cloud sync or the AI features.
@@ -64,7 +65,10 @@ post-workout analysis send text to **Google's Gemini API**.
 ## Other network activity
 
 - **Update check:** on launch the app asks GitHub whether a newer release
-  exists. GitHub sees your IP address. No personal data is sent.
+  exists. GitHub sees your IP address. No personal data is sent. If you choose
+  to update, the app can download the new APK from GitHub and pass it to
+  Android's package installer, which you confirm yourself; you can also just
+  open the release page in a browser instead.
 - **Android system backup:** the app disables Android's automatic Google cloud
   backup (`allowBackup=false`), so your local data is not copied to your Google
   account backup. Move it to a new device with the JSON export or cloud sync.
@@ -84,3 +88,8 @@ processing. In this app:
 ## Changes
 
 Material changes to this policy will be noted here with a new "last updated" date.
+
+- 2026-09-06: noted that the recovery heatmap's male/female body-figure choice
+  is part of app settings (and therefore included in a cloud backup if you use
+  one), and that the update check can now download and install the new APK
+  in-app.

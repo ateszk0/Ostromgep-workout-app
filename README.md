@@ -10,19 +10,19 @@
 - **Progressive Overload**: AI weight suggestions based on prior performance, machine-specific weight-increment settings, **Cable Machine Presets**, and an in-workout **Plate Calculator**.
 - **Statistics**: Summary tiles (volume, time, longest streak, monthly totals), a 7-day heatmap, muscle-group distribution (chart + body map), top exercises, personal records, **Stalled Lifts** detection with coaching hints (deload / technique / variation / more volume), and **1RM Progression** — an estimated one-rep-max trend per exercise (Epley / Brzycki).
 - **The Campaign (Hadjárat)**: A full siege-themed gamification layer computed entirely from your workout history. Earn **XP and levels** from every workout, wage a **weekly siege** against a castle sized to your own target volume (5 visual tiers, from an Outpost to a full Citadel, that crumbles as you log volume and keeps escalating past 100% up to a 150% overrun), clear 3 rotating **weekly quests**, climb a **Copper-to-Diamond league** each monthly season, and unlock **34 badges** across Bronze/Silver/Gold/Platinum difficulty. A dedicated Campaign screen has a full in-app guide, a tap-for-detail badge grid, and a league ladder showing exactly how far you are from the next tier.
-- **Customizable Dashboard**: Reorder or hide the home widgets — Ready to Siege recovery heatmap, Next Mission, Weekly Battle Log, Quick Metrics, Today's Workout, Campaign status, Training Block status, Stalled Lifts, Fresh Conquests (recent PRs) and a Siege Watch castle preview.
+- **Customizable Dashboard**: Reorder or hide the home widgets — Ready to Siege recovery heatmap (front + back body figure, switchable between a male and female body from a gear on the card), Next Mission, Weekly Battle Log, Quick Metrics, Today's Workout, Campaign status, Training Block status, Stalled Lifts, Fresh Conquests (recent PRs) and a Siege Watch castle preview.
 - **Cloud Sync & Data Portability**: Back up and restore history, custom exercises, routines and body-weight data via Firebase. Import/export full data as JSON, and **import a Hevy CSV export** to migrate your history in.
 - **Focus Mode (App Blocker)**: An anti-procrastination overlay that nudges you back to your workout if you open another app mid-session.
 - **QR Code Routine Sharing**: Data-agnostic serialization — share routines including fully custom exercises, no dependency on factory defaults.
 - **Smart Rest Timer**: Foreground-service rest timer with live notifications between sets.
 - **Exercise Library**: Built-in video form demonstrations and fuzzy-matching search by name or muscle group.
-- **Auto Updater**: Checks GitHub for new releases on startup and notifies you without interrupting a workout.
+- **Auto Updater**: Checks GitHub for new releases on startup and notifies you without interrupting a workout. Download and install the matching APK (debug or release) right from the popup, or open the GitHub release page manually - your choice.
 
 ## Design
 
 - **Tactical, dark or light**: Choose **System, Light or Dark** in Settings. Dark is a warm near-black (not pure black); Light is a warm paper tone (not screen-white) — neither is a plain Material default. A single deliberate accent per your choice runs through both. Surfaces read through tone and a 1px top edge highlight rather than heavy shadows.
 - **Bundled typography**: **Oswald** (condensed display) for headers against **IBM Plex Sans** for body — shipped as variable fonts, not system defaults.
-- **Phosphor icon set**: A single coherent icon family, bundled as local vector drawables.
+- **Phosphor icon set**: A single coherent icon family for the UI chrome, bundled as local vector drawables. Muscle-group icons are a separate set — a zoomed crop of an anatomy render (gray body, target muscle in red) per group.
 - **Accent colors**: Red (default), Yellow, Green, Blue, Purple — retuned to earthy, muted tones with per-accent contrast handling.
 - **Animated splash screen**: Android 12+ compliant splash on startup.
 
