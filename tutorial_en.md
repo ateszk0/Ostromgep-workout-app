@@ -18,7 +18,7 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
 - **Quick Metrics**: Tap the input field to record your daily body weight, then save it with the check button. The chart below shows the trend of your last 7 measurements.
 - **Today's Workout**: Let the AI build a full session from your recent training with one tap.
 - **Campaign**: Your level, XP bar, weekly streak, quest progress and league tier at a glance — tap it (or the trophy icon top-right) to open the full **Campaign** screen (see section 6).
-- **Training Block**: If you have an active periodization block, shows the current week and a **DELOAD** badge on recovery weeks. Empty if you have not started one.
+- **Training Block**: If you have an active periodization block, shows the current week, how many of that week's workouts you've done (X/Y), and a **DELOAD** badge on recovery weeks. Empty if you have not started one.
 - **Stalled Lifts**: Exercises whose estimated max has not moved in a while, each with a coaching hint (deload / check technique / try a variation / add volume). Empty if nothing is currently stalled.
 - **Fresh Conquests**: Your personal records from the last 30 days, labelled with what kind of record it is (max weight or session volume) and how long ago you set it.
 - **Siege Watch**: A live miniature of your castle from this week's siege — tap it to jump into the Campaign screen.
@@ -31,7 +31,7 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
 On the **Workout** tab (bottom navigation), choose how you want to train:
 
 - **Start Empty Workout**: No fixed plan — assemble exercises on the spot.
-- **My Routines**: Your saved templates. Tap **"Start Routine"** on a card to begin.
+- **My Routines**: Your saved templates. Tap **"Start Routine"** on a card to begin. On start — if there's room to progress from last time — a **progressive-overload** dialog offers a rep or weight bump per exercise; tick the ones you want or dismiss it. This can be turned off in **Settings → Workout** (on by default), and is skipped automatically on deload weeks.
 - **QR Code Import/Export**: Use the **QR icon** above the routine list to import plans shared by others. Share your own via **Share via QR** in the three-dot (⋯) menu on a routine card. The serialization is data-agnostic, so fully custom exercises transfer seamlessly without being tied to factory defaults.
 - **Manage Rotations**: The **rotation icon** (circular arrows, top right) lets you group routines you cycle through.
   - **Create Rotation**: Name it and choose which routines belong to it.
@@ -122,9 +122,15 @@ On the **Profile** tab:
 - **Recent Workouts list**: cards for your last workouts — tap for details, or use **Copy workout** / **Save as routine** to reuse them.
 - **Settings** (gear icon): a screen grouped into cards:
   - **Appearance**: name, profile picture, app language, **theme (System, Light or Dark)**, and accent color (**Red, Yellow, Green, Blue, Purple**).
+  - **Workout**: toggle the **progressive-overload prompt** (on by default).
   - **Timer**: rest-timer vibration, volume, and sound.
   - **Focus Mode (App Blocker)**: an overlay that reminds you to return to your workout if you open another app mid-session.
-  - **Data & Cloud Sync**: sign in with Google (Firebase) to back up and restore history, templates and library. **Export / Import full data as JSON**, or **Import CSV** to bring in a **Hevy** workout export.
+  - **Data & Cloud Sync**: sign in with Google or email to back up and restore history, templates and library.
+    - **On sign-in**: if the device has no workouts at all yet, the app silently pulls the cloud data down — nothing to ask about. If the device already has workouts, a choice dialog appears instead: **Upload to the cloud** (overwrites the cloud, confirmed), **Download from the cloud** (overwrites the device, confirmed), or **Merge** (combines both sets, nothing is lost, no confirmation needed).
+    - **Merge into / from Cloud** (also available from Settings any time): combines the local and cloud data (local wins on a conflict) and drops nothing — the safe default if you use more than one device.
+    - **Upload / Download**: fully overwrites the other side, after a confirmation prompt. If a device has no data, the app blocks the upload so it can't wipe the cloud copy.
+    - **Export / Import full data as JSON**, or **Import CSV** (Hevy / Strong / FitNotes export).
+    - **Restore local backup** (when available): before every cloud download, import or wipe the app auto-saves a local snapshot — this row restores the newest one if something went wrong.
   - **AI (Gemini API Key)**: paste your key (stored encrypted on-device).
   - **Cable Presets**: save common weight configurations for cable machines to speed up logging.
 
@@ -150,10 +156,17 @@ The **Training Block** screen turns a routine into a structured multi-week mesoc
 **Planning a block:**
 - **Source**: *Use existing routines* (pick a routine rotation — its routines become the training days) or *Generate with AI* (describe what you want and the AI produces the split).
 - **Block length**: 4–8 weeks.
-- **Deload every N weeks**: how often a lighter recovery week is inserted (the final week is always a deload).
-- **Extra sets per week**: how aggressively working-set volume ramps up across each non-deload cycle.
+- **Deload every N weeks**: how often a lighter recovery week is inserted. The final week is a deload too — unless the week before it already is (never two deloads back to back).
+- **Extra sets per week**: how many working sets the app adds per exercise with each week inside a cycle (1 = every exercise gets +1 set per week).
 
-**How it runs:** the app generates a week-by-week plan. Working (non-warm-up) sets scale up each week within a cycle and reset after each deload; deload weeks cut working-set volume roughly in half and are marked with a **DELOAD** badge. From the block screen you see **Week X / Y**, and you start the current week's workout straight from there. Warm-up sets are never scaled.
+**How it runs:**
+- The block screen always shows the **current week**: that week's routines with a "Start" button, and a header line for how many extra working sets it adds.
+- When you **finish** a workout from the week, that routine gets a checkmark. Once every workout in the week is done, a prominent **"Start week N"** button appears.
+- **You advance the week** — the app never rolls it over on a calendar. If you haven't finished every workout you can still move on (after a confirm), and the next week's volume takes effect.
+- On a **deload week** working sets are roughly halved and marked **DELOAD**. Warm-up sets are never scaled, and the **progressive-overload prompt** (add weight / reps) is skipped — a deload is about recovery.
+- The block and **progressive overload** complement each other: the block ramps *set count* week to week, overload ramps *weight/reps* session to session.
+- After the last week the **"Finish block"** button closes it and a "Block complete" screen appears, from which you can start a new block.
+- **AI blocks**: the generated routines are added to your routine list as `<block> W1 · …` and are removed automatically when you delete the block.
 
 Delete the block at any time to return to normal routine training.
 - **API Key**: To use the generator, you will need your own **Gemini API key**.

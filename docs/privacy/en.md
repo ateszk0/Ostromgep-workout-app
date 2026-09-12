@@ -5,7 +5,7 @@ title: Ostromgep - Privacy Policy
 
 # Ostromgep - Privacy Policy
 
-_Last updated: 2026-09-06 • Draft - review with a lawyer before publishing._
+_Last updated: 2026-09-12 • Draft - review with a lawyer before publishing._
 
 **Controller:** Attila Nagy, ostromgep@atisn.com.
 This is a personal fitness-tracking app for adults. It is not intended for children under 16.
@@ -33,11 +33,16 @@ This data is not sent anywhere unless you enable cloud sync or the AI features.
 
 ## Optional: Cloud backup (Firebase)
 
-If you create an account and use "Upload to cloud", the app stores a copy of the
+If you create an account (email + password, or Google Sign-In, which shares
+your email address and name) and choose to sync, the app stores a copy of the
 local data listed above in **Google Firebase** (Firestore + Authentication),
 under a document keyed to your account.
 
-- Sign-in: email + password, or Google Sign-In (which shares your email address and name).
+- Signing in on a device with no local data yet restores your data from the
+  cloud automatically. If the device already has data, the app asks you to
+  choose: upload (overwrite the cloud), download (overwrite the device), or
+  merge (combine both, nothing deleted). You can also trigger any of these
+  manually later from **Settings → Data & Sync**.
 - Purpose: so you can restore your data on another device.
 - Retention: kept until you delete it. **Settings → Data & Sync → "Delete account & data"**
   removes the cloud document and your sign-in account.
@@ -89,6 +94,10 @@ processing. In this app:
 
 Material changes to this policy will be noted here with a new "last updated" date.
 
+- 2026-09-12: noted that signing in can now restore your data from the cloud
+  automatically (if the device has none yet) or ask you to choose between
+  upload/download/merge (if it does), instead of always requiring a manual
+  "Upload to cloud" tap.
 - 2026-09-06: noted that the recovery heatmap's male/female body-figure choice
   is part of app settings (and therefore included in a cloud backup if you use
   one), and that the update check can now download and install the new APK

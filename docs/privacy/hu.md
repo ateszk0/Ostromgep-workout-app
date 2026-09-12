@@ -5,7 +5,7 @@ title: Ostromgep - Adatvédelmi tájékoztató
 
 # Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-09-06 • Tervezet - közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-09-12 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -33,11 +33,17 @@ Ez az adat nem kerül sehova, hacsak be nem kapcsolod a felhő-szinkront vagy az
 
 ## Opcionális: Felhőmentés (Firebase)
 
-Ha létrehozol egy fiókot és használod a „Feltöltés a felhőbe” gombot, az app a
+Ha létrehozol egy fiókot (e-mail + jelszó, vagy Google-belépés - utóbbi
+megosztja az e-mail-címed és a neved) és szinkronizálást választasz, az app a
 fenti helyi adatok másolatát a **Google Firebase**-ben (Firestore +
 Authentication) tárolja, a fiókodhoz kötött dokumentumban.
 
-- Belépés: e-mail + jelszó, vagy Google-belépés (utóbbi megosztja az e-mail-címed és a neved).
+- Ha olyan eszközön jelentkezel be, amin még nincs helyi adat, az app
+  automatikusan visszaállítja az adataidat a felhőből. Ha az eszközön már van
+  adat, az app megkérdezi: feltöltés (felülírja a felhőt), letöltés (felülírja
+  az eszközt), vagy összefésülés (egyesíti a kettőt, semmi nem törlődik).
+  Ezeket kézzel is elindíthatod bármikor a **Beállítások → Adatok és
+  szinkron** menüből.
 - Cél: hogy másik eszközön visszaállíthasd az adataidat.
 - Megőrzés: amíg nem törlöd. A **Beállítások → Adatok és szinkron → „Fiók és adatok
   törlése”** eltávolítja a felhő-dokumentumot és a belépési fiókodat.
@@ -92,6 +98,10 @@ tiltakozni a kezelés ellen. Ebben az appban:
 
 A tájékoztató lényeges változásait itt jelezzük, új „utolsó módosítás” dátummal.
 
+- 2026-09-12: rögzítettük, hogy bejelentkezéskor az app automatikusan
+  visszaállíthatja az adataidat a felhőből (ha az eszközön még nincs semmi),
+  vagy megkérdezi, mit válassz feltöltés/letöltés/összefésülés közül (ha már
+  van), ahelyett hogy mindig kézi „Feltöltés a felhőbe” koppintást igényelne.
 - 2026-09-06: rögzítettük, hogy a regenerációs hőtérkép férfi/női testalak-
   választása a beállítások része (így felhőmentés esetén abba is bekerül), és
   hogy a frissítés-ellenőrzés mostantól az appon belül le tudja tölteni és

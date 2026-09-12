@@ -18,7 +18,7 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
 - **Quick Metrics (Gyors mutatók)**: Kattints a beviteli mezőre a napi testsúlyod rögzítéséhez, majd mentsd el a pipa gombbal. Az alatta lévő grafikon az elmúlt 7 mérésed trendjét mutatja.
 - **Today's Workout (Mai edzés)**: Egy koppintással az MI összeállít egy teljes edzést a közelmúltad alapján.
 - **Campaign (Hadjárat)**: Szinted, XP-sávod, heti szériád, küldetéseid és liga-szinted egy pillantásra – koppints rá (vagy a jobb felső trófea ikonra) a teljes **Hadjárat** képernyő megnyitásához (lásd 6. pont).
-- **Training Block (Edzésblokk státusza)**: Ha van aktív periodizációs blokkod, mutatja az aktuális hetet és a **DELOAD** jelzést a regenerációs heteken. Üres, ha még nem indítottál blokkot.
+- **Training Block (Edzésblokk státusza)**: Ha van aktív periodizációs blokkod, mutatja az aktuális hetet, hogy a hét edzéseiből mennyit végeztél el (X/Y), és a **DELOAD** jelzést a regenerációs heteken. Üres, ha még nem indítottál blokkot.
 - **Stalled Lifts (Elakadás-figyelő)**: Gyakorlatok, amelyeknek a becsült maximuma egy ideje nem nőtt, mindegyikhez egy javaslattal (deload / technika ellenőrzése / variáció / több volumen). Üres, ha jelenleg semmi nem stagnál.
 - **Fresh Conquests (Friss hódítások)**: Az elmúlt 30 nap egyéni csúcsai, feltüntetve, hogy milyen típusú rekordról van szó (legnagyobb súly vagy szakasz volumen), és mennyi ideje történt.
 - **Siege Watch (Ostromfigyelő)**: Az e heti ostrom váradnak élő, kicsinyített képe – koppints rá, hogy a Hadjárat képernyőre ugorj.
@@ -31,7 +31,7 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
 A **Workout** fülön (alsó navigáció) választhatsz, hogyan szeretnél mozogni:
 
 - **Start Empty Workout (Üres edzés indítása)**: Nincs fix terv – ott helyben állítod össze a gyakorlatokat.
-- **My Routines (Saját rutinok)**: Az általad létrehozott sablonok. Kattints a kártya **„Start Routine”** gombjára az indításhoz.
+- **My Routines (Saját rutinok)**: Az általad létrehozott sablonok. Kattints a kártya **„Start Routine”** gombjára az indításhoz. Indításkor – ha az előző alkalomhoz képest van hova fejlődni – felugrik a **progresszív túlterhelés** ablak, ami gyakorlatonként javasol +1 ismétlést vagy +súlyt; jelöld ki, amit el akarsz fogadni, vagy vesd el. Ez a **Beállítások → Edzés** menüben kikapcsolható (alapból be van kapcsolva), és deload heteken automatikusan kimarad.
 - **QR kódos importálás/exportálás**: A rutinlista feletti **QR ikonnal** olvashatsz be mások által megosztott terveket. Saját rutinjaidat a kártya három pont (⋯) menüjében a **Share via QR** opcióval oszthatod meg. A szerializáció adat-agnosztikus, így a teljesen egyedi, saját gyakorlataid is gond nélkül átkerülnek.
 - **Manage Rotations (Rotációk kezelése)**: A jobb felső **rotáció ikonnal** (körkörös nyilak) csoportosíthatod a körbejárt rutinjaidat.
   - **Create Rotation (Rotáció létrehozása)**: Adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
@@ -122,9 +122,15 @@ A **Profile** fülön:
 - **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, vagy használd a **Copy workout** / **Save as routine** funkciókat az újrahasznosításhoz.
 - **Settings (Beállítások)** (fogaskerék ikon): kártyákra bontott képernyő:
   - **Appearance**: név, profilkép, app nyelve, **megjelenés (Rendszer, Világos vagy Sötét)**, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
+  - **Edzés (Workout)**: a **progresszív túlterhelés javaslat** kapcsolója (alapból be).
   - **Timer**: a pihenőidő rezgése, hangereje és hangja.
   - **Focus Mode (App Blocker)**: felület, ami visszaterel az edzéshez, ha más appot nyitnál meg közben.
-  - **Data & Cloud Sync**: Google fiókkal (Firebase) belépve mentheted és visszaállíthatod az előzményeket, sablonokat és a könyvtárat. **Teljes adat export/import JSON-ként**, vagy **Import CSV** egy **Hevy** edzés-export beolvasásához.
+  - **Data & Cloud Sync**: Google- vagy e-mail fiókkal belépve mentheted és visszaállíthatod az előzményeket, sablonokat és a könyvtárat.
+    - **Bejelentkezéskor**: ha az eszközön még nincs egyetlen edzésed sem, az app csendben letölti a felhőben tárolt adatot – nincs mivel kérdeznie. Ha viszont már van edzésed a gépen, felugrik egy választó ablak: **Feltöltés a felhőbe** (felülírja a felhőt, megerősítéssel), **Letöltés a felhőből** (felülírja az eszközt, megerősítéssel), vagy **Összefésülés** (a két adathalmaz egyesül, semmi nem vész el, nincs szükség megerősítésre).
+    - **Összefésülés a felhőbe / a felhőből** (Beállítások menüből is elérhető): egyesíti a helyi és a felhőbeli adatot (ütközésnél a helyi nyer), semmit nem dob el – ez a biztonságos alap, ha több eszközt használsz.
+    - **Feltöltés / Letöltés a felhőbe**: a másik oldalt teljesen felülírja, megerősítő kérdés után. Ha egy eszközön nincs adat, a feltöltést az app letiltja, hogy ne írja üresre a felhőt.
+    - **Teljes adat export/import JSON-ként**, vagy **Import CSV** (Hevy / Strong / FitNotes export).
+    - **Helyi mentés visszaállítása** (csak ha van): minden felhő-letöltés, import és törlés előtt az app automatikusan készít egy helyi pillanatképet – ezzel a sorral az utolsót visszatöltheted, ha valami félrement.
   - **AI (Gemini API Key)**: illeszd be a kulcsod (titkosítva, az eszközön tárolva).
   - **Cable Presets**: mentsd el a csigás gépekhez használt gyakori súlybeállításokat a gyorsabb naplózáshoz.
 
@@ -156,10 +162,17 @@ A **Training Block** képernyő egy rutinból strukturált, több hetes mezocikl
 **Egy blokk tervezése:**
 - **Forrás**: *Use existing routines* (válassz egy rutin-rotációt – a rutinjai lesznek az edzésnapok) vagy *Generate with AI* (írd le, mit szeretnél, és az MI elkészíti a felosztást).
 - **Block length**: 4–8 hét.
-- **Deload every N weeks**: milyen gyakran ékelődik be egy könnyebb regenerációs hét (az utolsó hét mindig deload).
-- **Extra sets per week**: mennyire agresszíven növekszik a munkaszettek volumene minden nem-deload cikluson belül.
+- **Deload every N weeks**: milyen gyakran ékelődik be egy könnyebb regenerációs hét. Az utolsó hét is deload – kivéve, ha az előtte lévő már az (nincs két deload egymás után).
+- **Extra sets per week**: hány munkaszettet ad hozzá az app gyakorlatonként minden héttel a cikluson belül (1 = minden gyakorlat +1 szett hetente).
 
-**Hogyan fut:** az app hétről hétre felépíti a tervet. A munka- (nem bemelegítő) szettek száma hétről hétre nő egy cikluson belül, és minden deload után nullázódik; a deload hetek nagyjából felére vágják a munkaszett-volument, és **DELOAD** jelzést kapnak. A blokk-képernyőn látod a **Week X / Y** állást, és onnan indíthatod az aktuális hét edzését. A bemelegítő szetteket sosem skálázza.
+**Hogyan fut:**
+- A blokk-képernyő mindig az **aktuális hetet** mutatja: az adott hét rutinjait „Indítás" gombbal, és a hét tetején, hogy hány extra munkaszettet ad hozzá.
+- Amikor **befejezel** egy edzést a hétből, a rutin pipát kap. Ha a hét minden edzése kész, alul kiemelten megjelenik a **„N. hét indítása"** gomb.
+- A hetet **te lépteted** – az app soha nem vált magától naptár szerint. Ha még nincs kész minden edzés, akkor is továbbléphetsz (megerősítés után), és a következő hét volumene érvénybe lép.
+- **Deload héten** a munkaszettek száma nagyjából a felére csökken, **DELOAD** jelzéssel. A bemelegítő szetteket az app sosem skálázza, és a **progresszív túlterhelés javaslat** (súly-/ismétlésnövelés) sem jelenik meg – a deload a regenerációról szól.
+- A blokk és a **progresszív túlterhelés** kiegészítik egymást: a blokk a *sorozatszámot* növeli hétről hétre, a túlterhelés a *súlyt/ismétlést* edzésről edzésre.
+- Az utolsó hét után a **„Blokk befejezése"** gomb lezárja a blokkot, és egy „Blokk teljesítve" képernyő jön, ahonnan új blokkot indíthatsz.
+- **AI-blokk**: a generált rutinok `<blokk> W1 · …` néven bekerülnek a rutinlistádba, és a blokk törlésekor automatikusan eltűnnek.
 
 A blokkot bármikor törölheted, hogy visszatérj a normál rutin-edzéshez.
 
