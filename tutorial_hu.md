@@ -107,7 +107,7 @@ Koppints a jobb felső trófea ikonra a Dashboardon (vagy a Hadjárat widgetre) 
 - **E heti ostrom**: minden hét egy roham egy vár ellen. A vár HP-ja a saját, közelmúltbeli heti volumencélod, így a vár **mérete** is ehhez igazodik – kisebb célnál egy szerény őrposzt vagy erőd, nagy célnál egy teljes, tornyos Citadella. Edzés közbeni volumennel sebzed: 50%-nál áttöröd a kaput, 100%-nál beveszed a várat, 150%-nál elsöprő győzelmet aratsz (a vár fehér zászlót tűz ki). A falak és tornyok láthatóan omlanak a haladásoddal, sosem ugyanúgy kétszer.
 - **Heti küldetések**: minden héten 3 forgó kihívás (edzz N-szer, dönts meg egy rekordot, teljesíts egy volumen- vagy szettcélt, eddz több izomcsoportot, egy hosszú edzés, korai heti edzés). Mindhárom teljesítése bónusz XP-t ad.
 - **Liga és szezon**: egy szezon egy naptári hónap. A liga-pontszámod a konzisztenciából jön – edzések, aktív hetek és szériád, nem a nyers erő –, így kezdőknek is fair marad. Emelkedj Réztől Bronzon, Ezüstön, Aranyon, Platinán át egészen Gyémántig. Koppints a Liga kártyára a teljes ranglétráért, ami megmutatja, mennyire vagy az egyes szintektől.
-- **Jelvények**: 34 kitüntetés, nehézség szerint Bronztól Platináig rendezve, éremszínezéssel, 3 oszlopos rácsban. Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
+- **Jelvények**: 57 kitüntetés, nehézség szerint Bronztól Gyémántig rendezve, szintenként színezve, 3 oszlopos rácsban, mindegyiken az általa feloldott avatar ikonjával (lásd 11. pont). Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
 - **Értesítések**: push értesítés érkezik ligalépéskor, minden heti küldetés teljesítésekor és új jelvénynél. Kikapcsolható: **Beállítások → Emlékeztetők → Hadjárat értesítések**.
 
 ---
@@ -121,7 +121,7 @@ A **Profile** fülön:
 - **Calendar**: naptár nézetben böngészheted a múltat; a ponttal jelölt napokon volt edzésed, a mai nap körvonalazva van.
 - **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, vagy használd a **Copy workout** / **Save as routine** funkciókat az újrahasznosításhoz.
 - **Settings (Beállítások)** (fogaskerék ikon): kártyákra bontott képernyő:
-  - **Appearance**: név, profilkép, app nyelve, **megjelenés (Rendszer, Világos vagy Sötét)**, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
+  - **Appearance**: név, a barátoknak látszó avatar és keret, app nyelve, **megjelenés (Rendszer, Világos vagy Sötét)**, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
   - **Edzés (Workout)**: a **progresszív túlterhelés javaslat** kapcsolója (alapból be).
   - **Timer**: a pihenőidő rezgése, hangereje és hangja.
   - **Focus Mode (App Blocker)**: felület, ami visszaterel az edzéshez, ha más appot nyitnál meg közben.
@@ -186,6 +186,24 @@ Az app indításkor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-
 - A **Letöltés** gomb közvetlenül a felugró ablakban letölti a hozzád illő APK-t (debug vagy release, progress-sávval), utána a **Telepítés** átadja a rendszer telepítőjének - nem kell böngésző. Először az Android megkéri, hogy engedélyezd az "ismeretlen appok telepítését" az Ostromgépnek; ezt egyszer engedélyezd, majd nyomd meg újra a Telepítés gombot.
 - A **Megnyitás GitHubon** gomb mindig elérhető is, ha inkább saját magad töltenéd le a release oldalról.
 - Sose akasztja meg az edzést: internet nélkül némán fut a háttérben.
+
+---
+
+## 11. Barátok
+
+A **Barátok** képernyőt a Hadjárat képernyő tetején lévő emberek ikonnal nyitod meg. Bejelentkezés kell hozzá (Beállítások → Adatok és felhő-szinkron).
+
+- **Barát hozzáadása**: az egyikőtök a **QR ikonnal** mutatja a kódját, a másik a **kamera ikonnal** beolvassa. Ez csak kérést küld: a másik fél **Barátok** fülének tetején jelenik meg, ott **Elfogadhatja**, **Elutasíthatja** vagy **Letilthatja**. A letiltottak (a tiltás ikon alatti lista) nem küldhetnek neked kérést, bökést vagy párbajt.
+- **Barátok fül**: a barátaid ligával, szériával és edzésszámmal. Húzd le a frissítéshez. Egy barátra koppintva megnyílik a képernyője; a kuka ikon eltávolítja (ő is elveszít téged).
+- **Ranglista fül**: te és a barátaid **Szezon** (alap), **Összsúly**, **E heti**, **Széria**, **Jelvények** vagy **Fejlődés** (az utolsó 4 hét volumene az előtte lévő 4-hez képest) szerint. Az első háromnak arany, ezüst és bronz jár.
+- **Aktivitás fül**: rekordok, jelvények, előléptetések, széria-mérföldkövek és párbaj-győzelmek tőled és a barátaidtól, a legújabb elöl.
+- **Egy barát képernyője**: helyezése a barátaid között, széria / heti súly / összsúly / edzésszám, szezonérmek, egy „Nálad hogy áll” kártya és a jelvényei (koppintásra részletek).
+  - **Bökd meg**: egy rövid üzenet, ami értesítésként ugrik fel nála. Ugyanazt a barátot 4 óránként bökheted meg egyszer. Nagyjából 30 percen belül megkapja, vagy azonnal, ha megnyitja a Barátok képernyőt. A bökés-értesítéseket a **Beállítások → Emlékeztetők** alatt kapcsolhatod ki.
+  - **Heti párbaj**: hívj ki egy barátot; ha elfogadja, az nyer, aki vasárnapig több volument mozgat. Az eredmény utána a barát képernyőjén látszik.
+- **Avatar, keret és cím** (Beállítások → Profil → *Megjelenés a barátoknak*): minden avatart egy jelvény old fel (a zároltak halványak, koppintásra kiírja, melyik jelvény), a kereteket a legmagasabb elért ligaszint, a cím pedig egy feloldott jelvényed. Az avatarod a profilképed mindenhol, a Kezdőlapon is.
+- **Szezonérmek és archívum**: minden lezárt hónap megmarad a végső ligáddal; az archívumot a Hadjárat képernyőről nyitod. A serleg olyan hónapot jelöl, amit a barátaid között elsőként fejeztél be.
+
+A barátaiddal a statisztikáid egy kis része oszlik meg (név, liga, széria, volumenek, jelvények, avatar, friss eredmények), az edzésnaplód soha. A részletek az adatvédelmi tájékoztatóban vannak.
 
 ---
 

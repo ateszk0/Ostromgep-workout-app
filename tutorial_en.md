@@ -107,7 +107,7 @@ Tap the trophy icon top-right on the Dashboard (or the Campaign widget) to open 
 - **This Week's Siege**: each week is a raid on a castle. The castle's HP is your own recent weekly volume target, so the castle's **size** scales with it too — from a small Outpost or Fort up to a full towered Citadel for a large target. Log volume during the week to damage it: 50% breaches the gate, 100% takes the keep, and 150% is a full overrun (the castle raises a white flag). The walls and towers visibly crumble as you progress, never quite the same way twice.
 - **Weekly Quests**: 3 rotating challenges each week (train N times, beat a PR, hit a volume or set goal, train several muscle groups, a long session, training early in the week). Clearing all 3 earns bonus XP.
 - **League and Season**: a season is one calendar month. Your league score comes from consistency — workouts, active weeks, and your streak, not raw strength — so it stays fair for beginners. Climb from Copper through Bronze, Silver, Gold, Platinum, up to Diamond. Tap the League card for a full ladder showing your distance to every tier.
-- **Badges**: 34 achievements sorted Bronze → Platinum by difficulty, medal-colored, in a 3-column grid. Tap any badge to see exactly what unlocks it.
+- **Badges**: 57 achievements sorted Bronze → Diamond by difficulty, colored by tier, in a 3-column grid, each showing the icon of the avatar it unlocks (see section 11). Tap any badge to see exactly what unlocks it.
 - **Notifications**: a push notification on a league promotion, clearing all weekly quests, and a new badge. Turn it off in **Settings → Reminders → Campaign notifications**.
 
 ---
@@ -121,7 +121,7 @@ On the **Profile** tab:
 - **Calendar**: browse the past in a calendar; a dot marks a workout day, and today is outlined.
 - **Recent Workouts list**: cards for your last workouts — tap for details, or use **Copy workout** / **Save as routine** to reuse them.
 - **Settings** (gear icon): a screen grouped into cards:
-  - **Appearance**: name, profile picture, app language, **theme (System, Light or Dark)**, and accent color (**Red, Yellow, Green, Blue, Purple**).
+  - **Appearance**: name, avatar and frame shown to friends, app language, **theme (System, Light or Dark)**, and accent color (**Red, Yellow, Green, Blue, Purple**).
   - **Workout**: toggle the **progressive-overload prompt** (on by default).
   - **Timer**: rest-timer vibration, volume, and sound.
   - **Focus Mode (App Blocker)**: an overlay that reminds you to return to your workout if you open another app mid-session.
@@ -186,6 +186,24 @@ The app checks its official GitHub page (**ateszk0/Ostromgep-workout-app**) on s
 - **Download** downloads the matching APK for your build (debug or release) right in the popup, with a progress bar, then **Install** hands it to the system installer - no browser needed. The first time, Android asks you to allow "install unknown apps" for Ostromgép; grant it once and tap Install again.
 - **View on GitHub** is always available too, if you'd rather download it yourself from the release page.
 - It never interrupts a workout: with no internet it stays silent in the background.
+
+---
+
+## 11. Friends
+
+Open **Friends** from the people icon at the top of the Campaign screen. You need to be signed in (Settings → Data & Cloud Sync).
+
+- **Add a friend**: one of you taps the **QR icon** to show your code, the other taps the **camera icon** and scans it. That only sends a request: it appears at the top of the other person's **Friends** tab, where they can **Accept**, **Decline** or **Block**. Blocked people (list under the block icon) can't send you requests, nudges or duels.
+- **Friends tab**: your friends with their league, streak and workout count. Pull down to refresh. Tap a friend to open their screen; the bin icon removes them (they drop you too).
+- **Leaderboard tab**: you and your friends ranked by **Season** (default), **Total volume**, **This week**, **Streak**, **Badges** or **Most improved** (volume of the last 4 weeks vs the 4 before). Gold, silver and bronze mark the top 3.
+- **Activity tab**: recent records, badges, promotions, streak milestones and duel wins from you and your friends, newest first.
+- **A friend's screen**: their rank among your friends, streak / weekly volume / total volume / workouts, season medals, a "compared to you" card and their badges (tap for details).
+  - **Nudge**: sends a short message that pops up as a notification for them. You can nudge the same friend once every 4 hours. They get it within about 30 minutes, or right away when they open the Friends screen. Turn nudge notifications off in **Settings → Reminders**.
+  - **Weekly duel**: challenge a friend; if they accept, whoever lifts more volume until Sunday wins. The result shows up on the friend's screen afterwards.
+- **Avatar, frame and title** (Settings → Profile → *Appearance for friends*): every avatar is unlocked by a badge (locked ones are dimmed, tap one to see which badge), frames unlock with the best league tier you have reached, and the title is one of your unlocked badges. Your avatar is your profile picture everywhere, including on the Dashboard.
+- **Season medals and archive**: every finished month is kept with your final league; open the archive from the Campaign screen. A trophy marks a month you finished first among your friends.
+
+Only a small subset of your stats is shared with friends (name, league, streak, volumes, badges, avatar, recent achievements) - never your workout log. Details are in the privacy policy.
 
 ---
 

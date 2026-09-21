@@ -5,7 +5,7 @@ title: Ostromgep - Adatvédelmi tájékoztató
 
 # Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-09-12 • Tervezet - közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-09-18 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -24,7 +24,7 @@ Helyben, egy eszközön lévő adatbázisban és a beállításokban:
 - Edzésnapló (gyakorlatok, sorozatok, ismétlések, súlyok, RPE/RIR, jegyzetek, időbélyegek)
 - Rutinok, edzésblokkok, egyéni gyakorlatok, mappák
 - Testsúlynapló (ha használod)
-- A megjelenített neved és (opcionálisan) a profilképed
+- A megjelenített neved
 - Beállítások (téma, nyelv, emlékeztetők, időzítő, app-blokkoló lista, és hogy a
   regenerációs hőtérkép férfi vagy női testalakot rajzol-e)
 - A saját Gemini API kulcsod, ha megadsz egyet (az Android Keystore-ral titkosítva tárolva)
@@ -70,6 +70,48 @@ edzés utáni elemzés szöveget küldenek a **Google Gemini API**-jának.
 - Az AI kimenete generált szöveg, tévedhet. Nem orvosi vagy táplálkozási tanács.
 - Adatfeldolgozók: Google (Gemini), Cloudflare (proxy).
 
+## Opcionális: Barátok
+
+Ha bejelentkezel és barátokat adsz hozzá (QR-kód beolvasásával vagy
+megosztásával), az app a Hadjárat-statisztikáid egy kis, elkülönített
+részét megosztja azokkal, akikkel kapcsolatba léptél:
+
+- **Mi kerül megosztásra:** a megjelenített neved, liga-szinted és
+  pontszámod, heti szériád, e heti edzésvolumened, edzésszámod, a
+  feloldott jelvényeid, a választott avatarod, kereted és címed, a lezárt
+  szezonjaid eredménye (hónap, szint, pontszám), egy „legtöbbet fejlődött”
+  százalék, és az utolsó néhány eredményed (rekord, jelvény, előléptetés,
+  széria-mérföldkő vagy párbaj-győzelem), ami a barátaid aktivitás-
+  feedjében jelenik meg. **Sosem kerül megosztásra:** az
+  edzésnaplód, rutinjaid, testsúlyod, vagy bármi más a privát
+  mentésedből.
+- **Ki látja:** csak azok a fiókok, akikkel kapcsolatba léptél - a
+  QR-kód beolvasása csak kérést küld, amit a másik félnek jóvá kell
+  hagynia. Nincs nyilvános katalógus, keresés, vagy globális
+  ranglista. Ez az adat egy külön Firestore-helyen (`publicProfiles`)
+  tárolódik, amit technikailag bármely bejelentkezett felhasználó
+  elolvashatna, ha már ismerné a fiókazonosítódat - az app viszont sehol
+  nem teszi közzé mások fiókazonosítóját, csak a sajátodat, a saját
+  QR-kódodon keresztül.
+- **Bökések kézbesítése:** az app nagyjából 30 percenként a háttérben (csak bejelentkezve és bekapcsolt bökés-értesítéssel), valamint a Barátok megnyitásakor ellenőrzi a bökéseket; nincs push szerver. Az ellenőrzés csak a saját postaládádat olvassa.
+- **Bökések és párbajok:** egy barát megbökhet (előre megadott rövid
+  üzenet, barátonként legfeljebb 4 óránként egyszer), és heti
+  volumen-párbajra hívhat. Ez a te neved, a barátod neve és a párbaj heti
+  volumen-összegei kerülnek a Firestore-ba; a bökéseket kézbesítés után
+  töröljük, a párbajokat pár héttel a vége után. A bökés-értesítéseket
+  a Beállítások -> Emlékeztetők alatt kikapcsolhatod.
+- **Letiltás:** a **Barátok** menüből letilthatsz valakit; ezután nem
+  küldhet neked kérést, bökést vagy párbajt.
+- **Leállítás:** távolítsd el a barátot a **Barátok** menüből az appban -
+  azonnal leáll az új adatok megosztása felé, bár ez nem törli
+  visszamenőleg, amit már látott, amíg kapcsolatban voltatok.
+- **Pontosság megjegyzés:** a liga-szint, széria és jelvények a saját
+  eszközödön, annak saját órájával számolódnak, ugyanúgy mint az app
+  többi részén (lásd az appon belüli Hadjárat-útmutatót) - nincs
+  szerver-oldali ellenőrzés arra, hogy ez az adat pontos, csak arra, hogy
+  a saját fiókod írta.
+- Adatfeldolgozó: Google (Firebase), ugyanúgy mint a felhőmentésnél.
+
 ## Egyéb hálózati tevékenység
 
 - **Frissítés-ellenőrzés:** indításkor az app megkérdezi a GitHubtól, van-e
@@ -98,6 +140,14 @@ tiltakozni a kezelés ellen. Ebben az appban:
 
 A tájékoztató lényeges változásait itt jelezzük, új „utolsó módosítás” dátummal.
 
+- 2026-09-21: a Barátok mostantól jóváhagyásos kéréseket, letiltást,
+  bökéseket, heti párbajokat, aktivitás-feedet, avatart/keretet/címet és
+  szezonérmeket használ (lásd fent az „Opcionális: Barátok” szakaszt). A
+  fiók törlése ezeket is törli.
+- 2026-09-18: hozzáadtuk az opcionális Barátok funkciót - a
+  Hadjárat-statisztikáid egy kis részét (név, liga-szint/pontszám, széria,
+  heti volumen, edzésszám, jelvények) megosztja az app azokkal, akikkel
+  QR-kóddal kapcsolatba lépsz, a privát edzésadataidból soha semmit.
 - 2026-09-12: rögzítettük, hogy bejelentkezéskor az app automatikusan
   visszaállíthatja az adataidat a felhőből (ha az eszközön még nincs semmi),
   vagy megkérdezi, mit válassz feltöltés/letöltés/összefésülés közül (ha már
