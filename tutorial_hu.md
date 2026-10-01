@@ -22,6 +22,9 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
 - **Stalled Lifts (Elakadás-figyelő)**: Gyakorlatok, amelyeknek a becsült maximuma egy ideje nem nőtt, mindegyikhez egy javaslattal (deload / technika ellenőrzése / variáció / több volumen). Üres, ha jelenleg semmi nem stagnál.
 - **Fresh Conquests (Friss hódítások)**: Az elmúlt 30 nap egyéni csúcsai, feltüntetve, hogy milyen típusú rekordról van szó (legnagyobb súly vagy szakasz volumen), és mennyi ideje történt.
 - **Siege Watch (Ostromfigyelő)**: Az e heti ostrom váradnak élő, kicsinyített képe – koppints rá, hogy a Hadjárat képernyőre ugorj.
+- **Kondibérlet**: Add meg, mikor vetted a bérletet és mennyi időre szól (egy preset, pl. 1/3/6 hónap vagy 1 év, vagy egyedi napszám) – a kártya ezután visszaszámolja a hátralévő napokat, vagy mutatja, mióta járt le, és egy napi emlékeztetőt kapsz, ha közeleg a lejárat. A ceruza ikonnal módosíthatod. Alapból rejtve, az Elrendezés szerkesztésében kapcsolhatod be.
+- **Barátok**: Max. 5 barátod avatarja a heti volumenükkel, koppints a kártyára, hogy egyenesen a teljes Barátok képernyőre juss. Alapból rejtve.
+- **Ranglista**: A fenti csipke-sorral kiválaszthatod a hat ranglista (Szezon, Teljes volumen, E heti, Széria, Jelvények, Legtöbbet javult) közül, melyiket mutassa, alatta a top 3 és a saját helyezésed látszik. Alapból rejtve.
 - **Edit Layout (Elrendezés szerkesztése)**: A dashboard alján lévő gombbal megnyílik egy párbeszédablak, ahol **átrendezheted** a widgeteket vagy **elrejtheted** azokat, amiket nem használsz. A lista görgethető, ha nem fér ki a képernyőn.
 
 ---
@@ -105,9 +108,9 @@ Koppints a jobb felső trófea ikonra a Dashboardon (vagy a Hadjárat widgetre) 
 
 - **XP és szintek**: minden befejezett edzés XP-t ad (alap mennyiség, volumen-bónusz, bónusz minden megdöntött személyes rekordért, mindezt a heti szériád szorozza fel). A felgyűlt XP-ből szintet lépsz.
 - **E heti ostrom**: minden hét egy roham egy vár ellen. A vár HP-ja a saját, közelmúltbeli heti volumencélod, így a vár **mérete** is ehhez igazodik – kisebb célnál egy szerény őrposzt vagy erőd, nagy célnál egy teljes, tornyos Citadella. Edzés közbeni volumennel sebzed: 50%-nál áttöröd a kaput, 100%-nál beveszed a várat, 150%-nál elsöprő győzelmet aratsz (a vár fehér zászlót tűz ki). A falak és tornyok láthatóan omlanak a haladásoddal, sosem ugyanúgy kétszer.
-- **Heti küldetések**: minden héten 3 forgó kihívás (edzz N-szer, dönts meg egy rekordot, teljesíts egy volumen- vagy szettcélt, eddz több izomcsoportot, egy hosszú edzés, korai heti edzés). Mindhárom teljesítése bónusz XP-t ad.
+- **Heti küldetések**: minden héten 3 forgó kihívás egy 12 elemű készletből (edzz N-szer, dönts meg egy rekordot, teljesíts egy volumen- vagy szettcélt, eddz több izomcsoportot, egy hosszú edzés, korai heti edzés, sokféle gyakorlat, hétvégi edzés, két edzés egy napon, egy kardió gyakorlat). Mindhárom teljesítése bónusz XP-t ad.
 - **Liga és szezon**: egy szezon egy naptári hónap. A liga-pontszámod a konzisztenciából jön – edzések, aktív hetek és szériád, nem a nyers erő –, így kezdőknek is fair marad. Emelkedj Réztől Bronzon, Ezüstön, Aranyon, Platinán át egészen Gyémántig. Koppints a Liga kártyára a teljes ranglétráért, ami megmutatja, mennyire vagy az egyes szintektől.
-- **Jelvények**: 57 kitüntetés, nehézség szerint Bronztól Gyémántig rendezve, szintenként színezve, 3 oszlopos rácsban, mindegyiken az általa feloldott avatar ikonjával (lásd 11. pont). Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
+- **Jelvények**: 62 kitüntetés, nehézség szerint Bronztól Gyémántig rendezve, szintenként színezve, 3 oszlopos rácsban, mindegyiken az általa feloldott avatar ikonjával (lásd 11. pont). Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
 - **Értesítések**: push értesítés érkezik ligalépéskor, minden heti küldetés teljesítésekor és új jelvénynél. Kikapcsolható: **Beállítások → Emlékeztetők → Hadjárat értesítések**.
 
 ---
@@ -180,7 +183,7 @@ A blokkot bármikor törölheted, hogy visszatérj a normál rutin-edzéshez.
 
 ## 10. Automatikus Frissítés és Karbantartás
 
-Az app indításkor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**):
+Az app minden megnyitáskor ellenőrzi a hivatalos GitHub oldalát (**ateszk0/Ostromgep-workout-app**) - legfeljebb 6 óránként, ha már naprakész, és ha a hálózat megbukik, újrapróbálja:
 
 - Egy felugró ablak értesít az új verzióról. Előtte exportáld az adataidat, a biztonság kedvéért.
 - A **Letöltés** gomb közvetlenül a felugró ablakban letölti a hozzád illő APK-t (debug vagy release, progress-sávval), utána a **Telepítés** átadja a rendszer telepítőjének - nem kell böngésző. Először az Android megkéri, hogy engedélyezd az "ismeretlen appok telepítését" az Ostromgépnek; ezt egyszer engedélyezd, majd nyomd meg újra a Telepítés gombot.

@@ -22,6 +22,9 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
 - **Stalled Lifts**: Exercises whose estimated max has not moved in a while, each with a coaching hint (deload / check technique / try a variation / add volume). Empty if nothing is currently stalled.
 - **Fresh Conquests**: Your personal records from the last 30 days, labelled with what kind of record it is (max weight or session volume) and how long ago you set it.
 - **Siege Watch**: A live miniature of your castle from this week's siege — tap it to jump into the Campaign screen.
+- **Gym Membership**: Enter when you bought your membership and how long it runs (a preset like 1/3/6 months or 1 year, or a custom number of days); the card then counts down the days left, or shows how long it's been expired, with a daily reminder once it's close to running out. Tap the pencil icon to change it. Hidden by default until you enable it in Edit Layout.
+- **Friends**: Up to 5 of your friends' avatars with their weekly volume, tap the card to jump straight into the full Friends screen. Hidden by default.
+- **Leaderboard**: Pick which of the six rankings (Season, Total volume, This week, Streak, Badges, Most improved) to show with the row of chips at the top, see the top 3 and your own rank below. Hidden by default.
 - **Edit Layout**: The button at the bottom of the dashboard opens a dialog where you can **reorder** the widgets or **hide** ones you don't use. The list scrolls if it does not fit the screen.
 
 ---
@@ -105,9 +108,9 @@ Tap the trophy icon top-right on the Dashboard (or the Campaign widget) to open 
 
 - **XP and Levels**: every finished workout earns XP (a base amount, a volume bonus, a bonus for every personal record you beat, all scaled up by your weekly streak). Level up as XP adds up.
 - **This Week's Siege**: each week is a raid on a castle. The castle's HP is your own recent weekly volume target, so the castle's **size** scales with it too — from a small Outpost or Fort up to a full towered Citadel for a large target. Log volume during the week to damage it: 50% breaches the gate, 100% takes the keep, and 150% is a full overrun (the castle raises a white flag). The walls and towers visibly crumble as you progress, never quite the same way twice.
-- **Weekly Quests**: 3 rotating challenges each week (train N times, beat a PR, hit a volume or set goal, train several muscle groups, a long session, training early in the week). Clearing all 3 earns bonus XP.
+- **Weekly Quests**: 3 rotating challenges each week, picked from a pool of 12 (train N times, beat a PR, hit a volume or set goal, train several muscle groups, a long session, training early in the week, a variety of exercises, a weekend session, two workouts in one day, a cardio exercise). Clearing all 3 earns bonus XP.
 - **League and Season**: a season is one calendar month. Your league score comes from consistency — workouts, active weeks, and your streak, not raw strength — so it stays fair for beginners. Climb from Copper through Bronze, Silver, Gold, Platinum, up to Diamond. Tap the League card for a full ladder showing your distance to every tier.
-- **Badges**: 57 achievements sorted Bronze → Diamond by difficulty, colored by tier, in a 3-column grid, each showing the icon of the avatar it unlocks (see section 11). Tap any badge to see exactly what unlocks it.
+- **Badges**: 62 achievements sorted Bronze → Diamond by difficulty, colored by tier, in a 3-column grid, each showing the icon of the avatar it unlocks (see section 11). Tap any badge to see exactly what unlocks it.
 - **Notifications**: a push notification on a league promotion, clearing all weekly quests, and a new badge. Turn it off in **Settings → Reminders → Campaign notifications**.
 
 ---
@@ -180,7 +183,7 @@ Delete the block at any time to return to normal routine training.
 
 ## 10. Auto Updater & Maintenance
 
-The app checks its official GitHub page (**ateszk0/Ostromgep-workout-app**) on startup:
+The app checks its official GitHub page (**ateszk0/Ostromgep-workout-app**) whenever you open it (at most every 6 hours once it is up to date, and it retries if the network fails):
 
 - A popup notifies you of a new version. Export your data first, just in case.
 - **Download** downloads the matching APK for your build (debug or release) right in the popup, with a progress bar, then **Install** hands it to the system installer - no browser needed. The first time, Android asks you to allow "install unknown apps" for Ostromgép; grant it once and tap Install again.
