@@ -5,7 +5,7 @@ title: Ostromgep - Privacy Policy
 
 # Ostromgep - Privacy Policy
 
-_Last updated: 2026-09-18 • Draft - review with a lawyer before publishing._
+_Last updated: 2026-10-13 • Draft - review with a lawyer before publishing._
 
 **Controller:** Attila Nagy, ostromgep@atisn.com.
 This is a personal fitness-tracking app for adults. It is not intended for children under 16.
@@ -14,7 +14,7 @@ This is a personal fitness-tracking app for adults. It is not intended for child
 
 - Everything you log lives **on your device** by default.
 - There are **no analytics, no ads, and no third-party trackers**.
-- Two things are optional and off until you turn them on: **cloud backup** (Firebase) and the **AI features** (Google Gemini).
+- Three things are optional and off until you turn them on: **cloud backup** (Firebase), the **AI features** (Google Gemini) and **heart-rate measuring on a Wear OS watch**.
 - You can **export** all your data as JSON, and **delete** your account and all data from inside the app.
 
 ## What the app stores on your device
@@ -24,7 +24,8 @@ Held locally in an on-device database and app settings:
 - Workout history (exercises, sets, reps, weights, RPE/RIR, notes, timestamps)
 - Routines, training blocks, custom exercises, folders
 - Body-weight log (if you use it)
-- Your display name
+- Average and maximum **heart rate** of a workout, if you measured it with a paired Wear OS watch (see "Optional: Wear OS watch" below)
+- Your display name and your chosen avatar, frame and title
 - App settings (theme, language, reminders, timer, app-blocker list, and
   whether the recovery heatmap draws a male or female body figure)
 - Your personal Gemini API key, if you enter one (stored encrypted via the Android Keystore)
@@ -38,6 +39,7 @@ your email address and name) and choose to sync, the app stores a copy of the
 local data listed above in **Google Firebase** (Firestore + Authentication),
 under a document keyed to your account.
 
+- Email/password accounts must verify their address (a link is emailed on sign-up) before cloud sync or Friends can write anything - Google sign-in is already verified. This is to make it costlier to spin up throwaway accounts against the shared free-tier Firestore quota.
 - Signing in on a device with no local data yet restores your data from the
   cloud automatically. If the device already has data, the app asks you to
   choose: upload (overwrite the cloud), download (overwrite the device), or
@@ -106,6 +108,30 @@ with people you've connected with:
   this data is accurate, only that it was written by your own account.
 - Processor: Google (Firebase), same as cloud backup above.
 
+## Optional: Wear OS watch (including heart rate)
+
+If you install the watch app and pair a Wear OS watch, the phone and the watch talk to each other
+through Google's Wearable Data Layer, **directly between your two devices** (Bluetooth / Wi-Fi). Nothing
+about this goes to the developer or to any server of ours.
+
+- **What the phone sends to the watch:** the exercise and set you are doing, the rest timer, your app
+  language and accent colour, and a few at-a-glance numbers for the watch tile and complications
+  (weekly streak, this week's training days, weekly siege progress, the name of your next routine and
+  your gym-membership expiry date).
+- **What the watch sends to the phone:** button presses (set done, +/-15 s, skip rest, start the next
+  routine, weight/repetition changes) and - only if you turn it on - **heart rate**.
+- **Heart rate is off until you switch it on** on the watch (Info page -> heart-rate button) and grant the
+  Android permission. While a workout runs, the watch measures your heart rate through Google's Health
+  Services and sends the phone a running summary (count, sum, minimum, maximum, latest). The phone shows
+  the current rate during the workout and stores only the **average and maximum** with that workout,
+  and only if at least about 30 readings were taken. Raw readings are not stored. You can turn it off
+  again with a long press on the heart-rate line.
+- Heart rate is health data. It is stored with the workout like the rest of your log: on your device, in
+  your JSON export and - **if you use cloud backup - in your Firestore backup**. It is **never** part of
+  the Friends data, share cards or anything shown to other people.
+- The watch keeps the last received data (so the tile works with the phone app closed). Removing the
+  watch app or unpairing the watch removes it from the watch.
+
 ## Other network activity
 
 - **Update check:** on launch the app asks GitHub whether a newer release
@@ -133,6 +159,9 @@ processing. In this app:
 
 Material changes to this policy will be noted here with a new "last updated" date.
 
+- 2026-10-13: added the optional Wear OS watch app - phone and watch exchange workout state directly; an optional, opt-in heart-rate measurement stores the average and maximum heart rate with a workout (see "Optional: Wear OS watch" above).
+
+- 2026-09-22: email/password accounts must verify their address before cloud sync or Friends can write; Firestore rules gained size limits and per-pair-per-week duel dedup as defenses against mass fake-account/quota abuse.
 - 2026-09-21: Friends now use approval-based requests, blocking, nudges,
   weekly duels, an activity feed, avatars/frames/titles and season medals
   (see "Optional: Friends" above). Deleting your account also deletes

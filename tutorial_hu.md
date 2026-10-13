@@ -211,3 +211,17 @@ A barátaiddal a statisztikáid egy kis része oszlik meg (név, liga, széria, 
 ---
 
 *Jó edzést és sikeres fejlődést az Ostromgéppel!*
+
+---
+
+## 12. Wear OS óra-app
+
+Opcionális társalkalmazás Wear OS órához (a GitHub-kiadásból az **Ostromgep-Wear** APK-t kell az órára telepíteni; a telefonra a szokásos APK kerül). Az értesítés-gombokhoz hasonlóan az óra addig működik, amíg a telefonon fut az app; különben megkér, hogy nyisd meg.
+
+- **Aktív edzés:** az óra mutatja az aktuális gyakorlatot, a szettet és a célt. A nagy **pipával** fejezed be a szettet (zöldre vált, majd indul a pihenő-visszaszámlálás). Pihenő közben: **-15 / ugrás / +15**; a gyűrű egyenletesen fogy, 3-2-1-nél a csuklódon ketyeg, a pihenő végén rezeg. A képernyő szélén szakaszokból álló gyűrű mutatja a szetteket (sárga = kész bemelegítés, zöld = kész munkaszett).
+- **Súly és ismétlés módosítása:** a **koronával** állíthatod a súlyt; az ismétlésre koppintva a korona azt állítja. Amint abbahagyod a forgatást, elküldi a telefonnak.
+- **Húzd jobbra** az infó oldalért: eltelt edzésidő, hanyadik gyakorlatnál tartasz, mi következik, és a pulzus.
+- A **pulzus** alapból ki van kapcsolva, az infó oldalon a szív gombbal kapcsolhatod be, és meg kell adnod az engedélyt. Edzés közben mér; az átlag és a maximum az edzéssel együtt mentődik (az edzésnaplóban látszik). Barátoknak soha nem jut ki.
+- **A következő küldetés indítása** az órán, ha nem fut edzés (két koppintás, a véletlen ellen).
+- **Csempe és komplikációk:** az Ostromgep csempe a szériát, a heti edzésnapokat, a következő rutint, a bérlet hátralévő napjait és az ostrom-gyűrűt mutatja; komplikáció: széria, ostrom, bérlet, következő küldetés és a hét.
+- Az óra követi a telefon-app **nyelvét és akcentszínét**. Ha valami nem csatlakozik, a képernyő hosszú nyomására diagnosztikai oldal jelenik meg.

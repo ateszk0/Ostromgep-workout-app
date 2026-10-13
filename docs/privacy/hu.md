@@ -5,7 +5,7 @@ title: Ostromgep - Adatvédelmi tájékoztató
 
 # Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-09-18 • Tervezet - közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-10-13 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -14,7 +14,7 @@ Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti 
 
 - Amit rögzítesz, alapból **az eszközödön marad**.
 - **Nincs analitika, nincs reklám, nincs harmadik feles követő.**
-- Két dolog opcionális és alapból ki van kapcsolva: a **felhőmentés** (Firebase) és az **AI-funkciók** (Google Gemini).
+- Három dolog opcionális és alapból ki van kapcsolva: a **felhőmentés** (Firebase), az **AI-funkciók** (Google Gemini) és a **pulzusmérés Wear OS órán**.
 - Az adataidat **JSON-ba exportálhatod**, és a fiókodat + minden adatot **az appon belül törölhetsz**.
 
 ## Amit az app az eszközödön tárol
@@ -24,7 +24,8 @@ Helyben, egy eszközön lévő adatbázisban és a beállításokban:
 - Edzésnapló (gyakorlatok, sorozatok, ismétlések, súlyok, RPE/RIR, jegyzetek, időbélyegek)
 - Rutinok, edzésblokkok, egyéni gyakorlatok, mappák
 - Testsúlynapló (ha használod)
-- A megjelenített neved
+- Egy edzés átlag- és maximális **pulzusa**, ha párosított Wear OS órával mérted (lásd lent: „Opcionális: Wear OS óra”)
+- A megjelenített neved és a választott avatarod, kereted és címed
 - Beállítások (téma, nyelv, emlékeztetők, időzítő, app-blokkoló lista, és hogy a
   regenerációs hőtérkép férfi vagy női testalakot rajzol-e)
 - A saját Gemini API kulcsod, ha megadsz egyet (az Android Keystore-ral titkosítva tárolva)
@@ -38,6 +39,10 @@ megosztja az e-mail-címed és a neved) és szinkronizálást választasz, az ap
 fenti helyi adatok másolatát a **Google Firebase**-ben (Firestore +
 Authentication) tárolja, a fiókodhoz kötött dokumentumban.
 
+- Az e-mail+jelszavas fiókoknak meg kell erősíteniük a címüket (regisztrációkor
+  kapnak egy megerősítő linket), mielőtt a felhőmentés vagy a Barátok bármit
+  írna - a Google-belépés eleve megerősített. Ez a közös, ingyenes
+  Firestore-kvótát célzó tömeges fiókregisztrációt teszi drágábbá.
 - Ha olyan eszközön jelentkezel be, amin még nincs helyi adat, az app
   automatikusan visszaállítja az adataidat a felhőből. Ha az eszközön már van
   adat, az app megkérdezi: feltöltés (felülírja a felhőt), letöltés (felülírja
@@ -112,6 +117,29 @@ részét megosztja azokkal, akikkel kapcsolatba léptél:
   a saját fiókod írta.
 - Adatfeldolgozó: Google (Firebase), ugyanúgy mint a felhőmentésnél.
 
+## Opcionális: Wear OS óra (a pulzusmérést is beleértve)
+
+Ha telepíted az óra-appot és párosítasz egy Wear OS órát, a telefon és az óra a Google Wearable Data
+Layerén keresztül beszélget egymással, **közvetlenül a két eszközöd között** (Bluetooth / Wi-Fi). Ebből
+semmi nem kerül a fejlesztőhöz vagy bármilyen szerverünkre.
+
+- **Amit a telefon küld az órának:** az aktuális gyakorlat és sorozat, a pihenő-időzítő, az app nyelve és
+  akcentszíne, valamint néhány áttekintő adat az óra csempéjéhez és komplikációihoz (heti széria, a heti
+  edzésnapok, a heti ostrom haladása, a következő rutinod neve és az edzőtermi bérleted lejárati dátuma).
+- **Amit az óra küld a telefonnak:** gombnyomások (sorozat kész, +/-15 mp, pihenő kihagyása, a következő
+  rutin indítása, súly/ismétlés módosítása) és - csak ha bekapcsolod - a **pulzus**.
+- **A pulzus alapból ki van kapcsolva**, az órán kapcsolhatod be (Infó oldal -> pulzus gomb), és meg kell
+  adnod az Android-engedélyt. Edzés közben az óra a Google Health Services-en át méri a pulzusod, és
+  futó összesítőt küld a telefonnak (darabszám, összeg, minimum, maximum, legutóbbi). A telefon az edzés
+  alatt mutatja az aktuális értéket, és az edzéssel csak az **átlagot és a maximumot** tárolja, és csak ha
+  legalább kb. 30 mérés készült. A nyers mérések nem tárolódnak. A pulzus sorra hosszan nyomva újra
+  kikapcsolhatod.
+- A pulzus egészségügyi adat. Az edzéssel együtt, a többi naplóadatoddal azonos módon tárolódik: az
+  eszközödön, a JSON-exportban és - **ha felhőmentést használsz - a Firestore-mentésben**. **Soha** nem
+  része a Barátok adatainak, a megosztó kártyáknak, és semminek, amit más emberek látnak.
+- Az óra megtartja az utoljára kapott adatot (hogy a csempe a telefon-app zárva tartása mellett is
+  működjön). Az óra-app eltávolítása vagy az óra párosításának megszüntetése törli azt az óráról.
+
 ## Egyéb hálózati tevékenység
 
 - **Frissítés-ellenőrzés:** indításkor az app megkérdezi a GitHubtól, van-e
@@ -138,8 +166,11 @@ tiltakozni a kezelés ellen. Ebben az appban:
 
 ## Változások
 
+- 2026-10-13: hozzáadtuk az opcionális Wear OS óra-appot - a telefon és az óra közvetlenül cserél edzésállapotot; egy opcionális, bekapcsolós pulzusmérés az edzéssel együtt tárolja az átlag- és maximális pulzust (lásd fent: „Opcionális: Wear OS óra”).
+
 A tájékoztató lényeges változásait itt jelezzük, új „utolsó módosítás” dátummal.
 
+- 2026-09-22: az e-mail+jelszavas fiókoknak meg kell erősíteniük a címüket, mielőtt a felhőmentés vagy a Barátok írna; a Firestore szabályok méretkorlátot és páronkénti-hetenkénti párbaj-egyediséget kaptak a tömeges fiókregisztráció / kvóta-visszaélés ellen.
 - 2026-09-21: a Barátok mostantól jóváhagyásos kéréseket, letiltást,
   bökéseket, heti párbajokat, aktivitás-feedet, avatart/keretet/címet és
   szezonérmeket használ (lásd fent az „Opcionális: Barátok” szakaszt). A

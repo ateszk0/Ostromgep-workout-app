@@ -18,6 +18,7 @@
 - **QR Code Routine Sharing**: Data-agnostic serialization — share routines including fully custom exercises, no dependency on factory defaults.
 - **Smart Rest Timer**: Foreground-service rest timer with live notifications between sets.
 - **Exercise Library**: Built-in video form demonstrations and fuzzy-matching search by name or muscle group.
+- **Wear OS Watch App** (optional companion): Remote-control the active workout from the wrist — current exercise and set, one tap for **set done**, a smooth rest countdown ring with **-15 / +15 / skip**, 3-2-1 haptic ticks and a buzz when the rest ends, the **crown to change weight and reps**, a ring of set segments around the bezel (yellow warm-up, green done), and a confetti burst for a new weight record. Start your **next mission from the watch**, glance at a **tile and complications** (weekly streak, this week's training days, siege progress, next routine, gym-membership days left), and optionally measure **heart rate** during workouts (opt-in; average/max are saved with the workout). The watch talks to the phone app directly over Bluetooth and, like the notification buttons, only works while the phone app is running.
 - **Auto Updater**: Checks GitHub for new releases on startup and notifies you without interrupting a workout. Download and install the matching APK (debug or release) right from the popup, or open the GitHub release page manually - your choice.
 
 ## Design
@@ -42,6 +43,7 @@
 - **EncryptedSharedPreferences** — on-device storage of the user's Gemini API key.
 - **Kotlin Coroutines + Flow** — reactive state; **StateFlow**-backed `ViewModel` (no DI framework).
 - **Foreground Service** — the rest timer and workout-keep-alive.
+- **Wear OS** — a companion watch app (`:wear`, Wear Compose Material 3, Tiles, Complications, Health Services) sharing a small plain-map protocol module (`:wire`) with the phone over the Wearable Data Layer.
 - Navigation is a lightweight in-app screen state + `HorizontalPager`; charts are drawn directly on `Canvas`.
 
 ## Get started
