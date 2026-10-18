@@ -216,12 +216,14 @@ A barátaiddal a statisztikáid egy kis része oszlik meg (név, liga, széria, 
 
 ## 12. Wear OS óra-app
 
-Opcionális társalkalmazás Wear OS órához (a GitHub-kiadásból az **Ostromgep-Wear** APK-t kell az órára telepíteni; a telefonra a szokásos APK kerül). Az értesítés-gombokhoz hasonlóan az óra addig működik, amíg a telefonon fut az app; különben megkér, hogy nyisd meg.
+Opcionális társalkalmazás Wear OS órához (a GitHub-kiadásból az **Ostromgep-Wear** APK-t kell az órára telepíteni; a telefonra a szokásos APK kerül). Az értesítés-gombokhoz hasonlóan az óra addig működik, amíg a telefonon fut az app; különben megkér, hogy nyisd meg. A telefont **magától** megtalálja és követi: az edzés indítása, a telefon-app megnyitása vagy bezárása koppintás nélkül megjelenik az órán.
 
-- **Aktív edzés:** az óra mutatja az aktuális gyakorlatot, a szettet és a célt. A nagy **pipával** fejezed be a szettet (zöldre vált, majd indul a pihenő-visszaszámlálás). Pihenő közben: **-15 / ugrás / +15**; a gyűrű egyenletesen fogy, 3-2-1-nél a csuklódon ketyeg, a pihenő végén rezeg. A képernyő szélén szakaszokból álló gyűrű mutatja a szetteket (sárga = kész bemelegítés, zöld = kész munkaszett).
+- **Edzés indítása:** ha nem fut edzés, az óra az **összes rutinodat** listázza egy görgethető Wear-listában (érintéssel vagy koronával; a sorok a képernyő széle felé kisebbednek, és egy sor mindig középen áll meg). A **következő küldetés** van elöl, kiemelve. Koppints egy rutinra a megerősítéshez (zöldre vált: „Indítod?"), még egyszer koppintva elindul a telefonon.
+- **Aktív edzés:** az óra mutatja az aktuális gyakorlatot, a szettet és a célt. A nagy **pipával** fejezed be a szettet (zöldre vált, majd indul a pihenő-visszaszámlálás). Pihenő közben: **-15 / ugrás / +15**; a gyűrű egyenletesen fogy, 3-2-1-nél a csuklódon ketyeg, a pihenő végén rezeg. A képernyő szélén szakaszokból álló gyűrű mutatja a szetteket (sárga = kész bemelegítés, zöld = kész munkaszett). Ha a következő szett másik gyakorlathoz tartozik, a pihenő kiírja a nevét.
 - **Súly és ismétlés módosítása:** a **koronával** állíthatod a súlyt; az ismétlésre koppintva a korona azt állítja. Amint abbahagyod a forgatást, elküldi a telefonnak.
+- **Húzd balra** a gyakorlat **bemutató videójáért** (ismétlődő, néma). A klipet a telefon tölti le és adja át az órának, ezért a telefonnak kell internet; a videó nélküli gyakorlatnál ezt írja.
 - **Húzd jobbra** az infó oldalért: eltelt edzésidő, hanyadik gyakorlatnál tartasz, mi következik, és a pulzus.
-- A **pulzus** alapból ki van kapcsolva, az infó oldalon a szív gombbal kapcsolhatod be, és meg kell adnod az engedélyt. Edzés közben mér; az átlag és a maximum az edzéssel együtt mentődik (az edzésnaplóban látszik). Barátoknak soha nem jut ki.
-- **A következő küldetés indítása** az órán, ha nem fut edzés (két koppintás, a véletlen ellen).
+- **Új súlyrekord:** konfetti és rezgés-minta, ha egy gyakorlatban megdöntöd a legnagyobb súlyodat.
+- A **pulzus** alapból ki van kapcsolva, az infó oldalon a szív gombbal kapcsolhatod be, és meg kell adnod az engedélyt. Edzés közben mér; a telefon élőben mutatja, az átlag és a maximum az edzéssel együtt mentődik (az edzésnaplóban látszik). Barátoknak soha nem jut ki.
 - **Csempe és komplikációk:** az Ostromgep csempe a szériát, a heti edzésnapokat, a következő rutint, a bérlet hátralévő napjait és az ostrom-gyűrűt mutatja; komplikáció: széria, ostrom, bérlet, következő küldetés és a hét.
-- Az óra követi a telefon-app **nyelvét és akcentszínét**. Ha valami nem csatlakozik, a képernyő hosszú nyomására diagnosztikai oldal jelenik meg.
+- Az óra követi a telefon-app **nyelvét és akcentszínét**, és az Ostromgép logóját viseli (ikon és animált indítóképernyő). Ha valami nem csatlakozik, a képernyő hosszú nyomására diagnosztikai oldal jelenik meg.

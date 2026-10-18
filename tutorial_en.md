@@ -216,12 +216,14 @@ Only a small subset of your stats is shared with friends (name, league, streak, 
 
 ## 12. Wear OS Watch App
 
-An optional companion for your Wear OS watch (install the **Ostromgep-Wear** APK from the GitHub release on the watch; the phone app is the normal APK). Like the notification buttons, the watch works while the phone app is running; otherwise it asks you to open it.
+An optional companion for your Wear OS watch (install the **Ostromgep-Wear** APK from the GitHub release on the watch; the phone app is the normal APK). Like the notification buttons, the watch works while the phone app is running; otherwise it asks you to open it. It finds the phone and follows it **by itself** - starting a workout, opening or closing the phone app all show up on the watch without a tap.
 
-- **Active workout:** the watch shows the current exercise, set and target. Tap the big **check** to finish the set (it turns green, then the rest countdown starts). During the rest: **-15 / skip / +15**; the ring drains evenly, ticks on your wrist at 3-2-1 and buzzes when the rest is over. A ring of segments around the screen edge shows your sets (yellow = finished warm-up, green = finished working set).
+- **Start a routine:** with no workout running, the watch lists **all your routines** in a scrolling Wear list (touch or crown; the rows shrink towards the screen edge and one rests in the middle). The **next mission** is first and highlighted. Tap a routine once to confirm (it turns green: "Start?"), tap it again to start it on the phone.
+- **Active workout:** the watch shows the current exercise, set and target. Tap the big **check** to finish the set (it turns green, then the rest countdown starts). During the rest: **-15 / skip / +15**; the ring drains evenly, ticks on your wrist at 3-2-1 and buzzes when the rest is over. A ring of segments around the screen edge shows your sets (yellow = finished warm-up, green = finished working set). When the next set belongs to another exercise, the rest shows its name.
 - **Change weight and reps:** turn the **crown** to change the weight; tap the repetitions to make the crown change those instead. It is sent to the phone once you stop turning.
+- **Swipe left** for the exercise **demo video** (looping, silent). The phone downloads the clip and hands it to the watch, so the phone needs a connection; exercises without a video say so.
 - **Swipe right** for the info page: elapsed workout time, which exercise you are on, what is next, and heart rate.
-- **Heart rate** is off until you turn it on (info page, heart button) and allow the permission. It is measured during the workout; the average and maximum are saved with it (visible in your workout log). It is never shared with friends.
-- **Start the next mission** from the watch when no workout is running (two taps, to avoid accidents).
+- **New weight record:** confetti and a haptic pattern when you beat your best weight for an exercise.
+- **Heart rate** is off until you turn it on (info page, heart button) and allow the permission. It is measured during the workout; the phone shows it live, and the average and maximum are saved with the workout (visible in your workout log). It is never shared with friends.
 - **Tile and complications:** add the Ostromgep tile for streak, this week's training days, next routine, gym-membership days left and the siege ring; complications for streak, siege, membership, next mission and the week.
-- The watch follows the phone app's **language and accent colour**. Long-press the watch screen for a diagnostics page if something does not connect.
+- The watch follows the phone app's **language and accent colour** and wears the Ostromgep logo (icon and an animated launch screen). Long-press the watch screen for a diagnostics page if something does not connect.

@@ -5,7 +5,7 @@ title: Ostromgep - Adatvédelmi tájékoztató
 
 # Ostromgep - Adatvédelmi tájékoztató
 
-_Utolsó módosítás: 2026-10-13 • Tervezet - közzététel előtt jogásszal átnézendő._
+_Utolsó módosítás: 2026-10-18 • Tervezet - közzététel előtt jogásszal átnézendő._
 
 **Adatkezelő:** Attila Nagy, ostromgep@atisn.com.
 Ez egy személyes, felnőtteknek szánt edzésnapló-alkalmazás. 16 év alatti gyerekeknek nem ajánlott.
@@ -125,9 +125,9 @@ semmi nem kerül a fejlesztőhöz vagy bármilyen szerverünkre.
 
 - **Amit a telefon küld az órának:** az aktuális gyakorlat és sorozat, a pihenő-időzítő, az app nyelve és
   akcentszíne, valamint néhány áttekintő adat az óra csempéjéhez és komplikációihoz (heti széria, a heti
-  edzésnapok, a heti ostrom haladása, a következő rutinod neve és az edzőtermi bérleted lejárati dátuma).
-- **Amit az óra küld a telefonnak:** gombnyomások (sorozat kész, +/-15 mp, pihenő kihagyása, a következő
-  rutin indítása, súly/ismétlés módosítása) és - csak ha bekapcsolod - a **pulzus**.
+  edzésnapok, a heti ostrom haladása, a **mentett rutinjaid nevei**, hogy az órán indíthass egyet, és az edzőtermi bérleted lejárati dátuma). Ha egy gyakorlat bemutató videójára húzol, a telefon tölti le a klipet ugyanarról a videó-szerverről, amelyet a telefon-app eddig is használt (maga az óra soha nem csatlakozik az internetre), és átadja az órának, ami az utolsó néhány klipet megtartja.
+- **Amit az óra küld a telefonnak:** gombnyomások (sorozat kész, +/-15 mp, pihenő kihagyása, egy rutin
+  indítása, súly/ismétlés módosítása, egy gyakorlat videójának kérése) és - csak ha bekapcsolod - a **pulzus**.
 - **A pulzus alapból ki van kapcsolva**, az órán kapcsolhatod be (Infó oldal -> pulzus gomb), és meg kell
   adnod az Android-engedélyt. Edzés közben az óra a Google Health Services-en át méri a pulzusod, és
   futó összesítőt küld a telefonnak (darabszám, összeg, minimum, maximum, legutóbbi). A telefon az edzés
@@ -165,6 +165,8 @@ tiltakozni a kezelés ellen. Ebben az appban:
 - Bármi máshoz írj ide: ostromgep@atisn.com.
 
 ## Változások
+
+- 2026-10-18: az óra-app megkapja a mentett rutinjaid nevét (hogy az órán indíthass egyet) és a gyakorlat-bemutató videókat is, amelyeket a telefon tölt le az app által eddig is használt videó-szerverről, és ad át az órának; új harmadik fél nem érintett.
 
 - 2026-10-13: hozzáadtuk az opcionális Wear OS óra-appot - a telefon és az óra közvetlenül cserél edzésállapotot; egy opcionális, bekapcsolós pulzusmérés az edzéssel együtt tárolja az átlag- és maximális pulzust (lásd fent: „Opcionális: Wear OS óra”).
 

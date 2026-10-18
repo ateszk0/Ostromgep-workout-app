@@ -5,7 +5,7 @@ title: Ostromgep - Privacy Policy
 
 # Ostromgep - Privacy Policy
 
-_Last updated: 2026-10-13 • Draft - review with a lawyer before publishing._
+_Last updated: 2026-10-18 • Draft - review with a lawyer before publishing._
 
 **Controller:** Attila Nagy, ostromgep@atisn.com.
 This is a personal fitness-tracking app for adults. It is not intended for children under 16.
@@ -116,10 +116,12 @@ about this goes to the developer or to any server of ours.
 
 - **What the phone sends to the watch:** the exercise and set you are doing, the rest timer, your app
   language and accent colour, and a few at-a-glance numbers for the watch tile and complications
-  (weekly streak, this week's training days, weekly siege progress, the name of your next routine and
-  your gym-membership expiry date).
-- **What the watch sends to the phone:** button presses (set done, +/-15 s, skip rest, start the next
-  routine, weight/repetition changes) and - only if you turn it on - **heart rate**.
+  (weekly streak, this week's training days, weekly siege progress, the **names of your saved routines**
+  so you can start one from the watch, and your gym-membership expiry date). When you swipe to an
+  exercise's demo video, the phone downloads that clip from the same video host the phone app already uses
+  (the watch itself never connects to the internet) and passes it to the watch, which keeps the last few clips.
+- **What the watch sends to the phone:** button presses (set done, +/-15 s, skip rest, start a
+  routine, weight/repetition changes, a request for an exercise's video) and - only if you turn it on - **heart rate**.
 - **Heart rate is off until you switch it on** on the watch (Info page -> heart-rate button) and grant the
   Android permission. While a workout runs, the watch measures your heart rate through Google's Health
   Services and sends the phone a running summary (count, sum, minimum, maximum, latest). The phone shows
@@ -159,6 +161,7 @@ processing. In this app:
 
 Material changes to this policy will be noted here with a new "last updated" date.
 
+- 2026-10-18: the watch app also receives the names of your saved routines (to start one from the watch) and exercise demo videos, which the phone downloads from the video host the app already used and hands to the watch; no new third party is involved.
 - 2026-10-13: added the optional Wear OS watch app - phone and watch exchange workout state directly; an optional, opt-in heart-rate measurement stores the average and maximum heart rate with a workout (see "Optional: Wear OS watch" above).
 
 - 2026-09-22: email/password accounts must verify their address before cloud sync or Friends can write; Firestore rules gained size limits and per-pair-per-week duel dedup as defenses against mass fake-account/quota abuse.
