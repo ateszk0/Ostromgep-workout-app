@@ -1,10 +1,10 @@
 # Ostromgep
 
-**Ostromgep** is an Android workout application built for efficiency and results. It pairs advanced set-by-set tracking with AI-driven planning and full mesocycle periodization, wrapped in a deliberate, high-contrast dark interface designed for the gym.
+**Ostromgep** is an Android workout application built for efficiency and privacy. It pairs advanced set-by-set tracking with AI-driven planning and full mesocycle periodization, wrapped in a deliberate interface designed for the gym.
 
 ## Key Features
 
-- **AI Workout Generator & Evaluation**: Powered by **Google Gemini** (via a Cloudflare Worker proxy, or your own API key), the app generates personalized multi-day routines, suggests starting weights from your history, produces dynamic warm-up / static cooldown protocols with illustrated stretches, and writes a bilingual post-workout analysis into your log.
+- **AI Workout Generator & Evaluation**: Powered by **Google Gemini** (via default or your own API key), the app generates personalized multi-day routines, suggests starting weights from your history, produces dynamic warm-up / static cooldown protocols with illustrated stretches, and writes a bilingual post-workout analysis into your log.
 - **Training Blocks (Periodization)**: Plan a 4–8 week mesocycle with automatic deload weeks from an existing routine rotation or an AI-generated split. Each week adds a fixed number of working sets per exercise; deload weeks halve them. Progression is **completion-driven** — the app checks off each workout you finish and you advance to the next week yourself, it never rolls over on a timer.
 - **Advanced Set Tracking**: Log sets, reps, weight and RPE with a fast table UI. Supersets, warm-up sets, a swipe-to-delete gesture, and a distraction-free **Simple view** for one-set-at-a-time logging.
 - **Progressive Overload**: AI weight suggestions based on prior performance, machine-specific weight-increment settings, **Cable Machine Presets**, and an in-workout **Plate Calculator**.
