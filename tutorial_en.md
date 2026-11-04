@@ -24,21 +24,26 @@ The **Dashboard** is the main screen where you get a quick overview of your curr
 - **Siege Watch**: A live miniature of your castle from this week's siege — tap it to jump into the Campaign screen.
 - **Gym Membership**: Enter when you bought your membership and how long it runs (a preset like 1/3/6 months or 1 year, or a custom number of days); the card then counts down the days left, or shows how long it's been expired, with a daily reminder once it's close to running out. Tap the pencil icon to change it. Hidden by default until you enable it in Edit Layout.
 - **Friends**: Up to 5 of your friends' avatars with their weekly volume, tap the card to jump straight into the full Friends screen. Hidden by default.
-- **Leaderboard**: Pick which of the six rankings (Season, Total volume, This week, Streak, Badges, Most improved) to show with the row of chips at the top, see the top 3 and your own rank below. Hidden by default.
+- **Leaderboard**: Pick which of the six rankings (Season, Total volume, This week, Streak, Badges, Most improved) to show with the row of buttons at the top, see the top 3 and your own rank below. Hidden by default.
 - **Edit Layout**: The button at the bottom of the dashboard opens a dialog where you can **reorder** the widgets or **hide** ones you don't use. The list scrolls if it does not fit the screen.
 
 ---
 
 ## 2. Starting a Workout and Managing Routines
 
-On the **Workout** tab (bottom navigation), choose how you want to train:
+On the **Workout** tab (bottom navigation), everything starts from one screen:
 
-- **Start Empty Workout**: No fixed plan — assemble exercises on the spot.
-- **My Routines**: Your saved templates. Tap **"Start Routine"** on a card to begin. On start — if there's room to progress from last time — a **progressive-overload** dialog offers a rep or weight bump per exercise; tick the ones you want or dismiss it. This can be turned off in **Settings → Workout** (on by default), and is skipped automatically on deload weeks.
-- **QR Code Import/Export**: Use the **QR icon** above the routine list to import plans shared by others. Share your own via **Share via QR** in the three-dot (⋯) menu on a routine card. The serialization is data-agnostic, so fully custom exercises transfer seamlessly without being tied to factory defaults.
-- **Manage Rotations**: The **rotation icon** (circular arrows, top right) lets you group routines you cycle through.
+- **Header**: the week at a glance (seven dots, green for days you trained, the accent ring for today) and, below it, your **training block** as a thin progress line - or a quiet "No active training block" line with a **Plan** button when none runs.
+- **Today's plan**: the next routine, chosen from your active rotation by whichever you trained longest ago. **Start** begins it straight away; tapping the card opens the preview.
+- **Quick actions**: **New Routine**, **Explore** and **Scan QR** buttons, in the same grey as the cards. The floating **Empty workout** button (bottom right) starts a workout with no plan; it shrinks to an icon while you scroll.
+- **Your routines**, grouped by rotation. The active rotation is open and tagged; the others fold away. Each row shows the routine's name, its length and when you last trained it, and a small **"rested" / "still recovering"** button (from your last 48 hours). Press and hold it and a body map grows out above it, and shrinks away when you let go: muscles the routine does not work stay grey, the ones it works are coloured like the Home heatmap (red just trained, amber half way, green rested). The next routine has an accent outline.
+- **Routine preview**: tap any routine to see its exercises (sets × reps and your last weight) before anything starts. Choose **how much time you have today** (30 / 45 / 60) and the preview shows how the workout shrinks: sets are trimmed first, then the last exercises are paired as supersets, and only as a last resort an exercise is left out - never one that is the only work for a muscle in that workout. **Start Routine** begins it; **edit**, **share via QR** and **delete** are the icons at the top. On start - if there's room to progress from last time - a **progressive-overload** dialog offers a rep or weight bump per exercise; tick the ones you want or dismiss it. This can be turned off in **Settings → Workout** (on by default), and is skipped automatically on deload weeks.
+- **QR Code Import/Export**: Use the **Scan QR** button to import plans shared by others. Share your own from the routine preview. The serialization is data-agnostic, so fully custom exercises transfer seamlessly without being tied to factory defaults.
+- **Manage Rotations**: The **Manage rotations** button below the list lets you group routines you cycle through.
   - **Create Rotation**: Name it and choose which routines belong to it.
-  - **Active Rotation**: Select a rotation and only its routines cycle through the **Next Mission** widget on the dashboard.
+  - **Active Rotation**: Select a rotation and only its routines cycle through **Today's plan** and the **Next Mission** widget on the dashboard.
+- **First run**: with no routines yet, the tab offers three ready-made ones to add with one tap.
+- **Starting another workout** while one is running asks first. The safe answer, **Cancel**, is the highlighted button; **Start new workout** discards the running one.
 - **New Routine**: Create a new savable plan in the **Routine Editor** (add exercises, set default reps, build supersets).
 - **Explore Routines**: A two-tab screen. One tab has pre-assembled plans (Push-Pull-Legs, Full Body, …) you can save with **"Add to my routines"** — these are placeholders, not perfect programs. The other tab is the **AI Workout Generator** (see section 8).
 - **Training Block**: Opens the periodization planner (see section 9).
@@ -110,7 +115,7 @@ Tap the trophy icon top-right on the Dashboard (or the Campaign widget) to open 
 - **This Week's Siege**: each week is a raid on a castle. The castle's HP is your own recent weekly volume target, so the castle's **size** scales with it too — from a small Outpost or Fort up to a full towered Citadel for a large target. Log volume during the week to damage it: 50% breaches the gate, 100% takes the keep, and 150% is a full overrun (the castle raises a white flag). The walls and towers visibly crumble as you progress, never quite the same way twice.
 - **Weekly Quests**: 3 rotating challenges each week, picked from a pool of 12 (train N times, beat a PR, hit a volume or set goal, train several muscle groups, a long session, training early in the week, a variety of exercises, a weekend session, two workouts in one day, a cardio exercise). Clearing all 3 earns bonus XP.
 - **League and Season**: a season is one calendar month. Your league score comes from consistency — workouts, active weeks, and your streak, not raw strength — so it stays fair for beginners. Climb from Copper through Bronze, Silver, Gold, Platinum, up to Diamond. Tap the League card for a full ladder showing your distance to every tier.
-- **Badges**: 62 achievements sorted Bronze → Diamond by difficulty, colored by tier, in a 3-column grid, each showing the icon of the avatar it unlocks (see section 11). Tap any badge to see exactly what unlocks it.
+- **Badges**: 63 achievements sorted Bronze → Diamond by difficulty, colored by tier, in a 3-column grid, each showing the icon of the avatar it unlocks (see section 11). Tap any badge to see exactly what unlocks it.
 - **Notifications**: a push notification on a league promotion, clearing all weekly quests, and a new badge. Turn it off in **Settings → Reminders → Campaign notifications**.
 
 ---
@@ -122,7 +127,7 @@ On the **Profile** tab:
 - **Recent Workouts Volume Chart**: a bar chart of recent total volume, so you can see whether your load is trending up.
 - **Workouts**: opens your full **Workout Log**. Tap a past workout for details, then use **AI Evaluation** to get a detailed retroactive analysis of that session (in the app's language).
 - **Calendar**: browse the past in a calendar; a dot marks a workout day, and today is outlined.
-- **Recent Workouts list**: cards for your last workouts — tap for details, or use **Copy workout** / **Save as routine** to reuse them.
+- **Recent Workouts list**: cards for your last workouts — tap for details, use the **copy icon** on a card to start a new workout from it (the overload suggestion is offered, so you don't just repeat last time), or open it and use **Save as routine**.
 - **Settings** (gear icon): a screen grouped into cards:
   - **Appearance**: name, avatar and frame shown to friends, app language, **theme (System, Light or Dark)**, and accent color (**Red, Yellow, Green, Blue, Purple**).
   - **Workout**: toggle the **progressive-overload prompt** (on by default).

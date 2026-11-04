@@ -31,14 +31,19 @@ A **Dashboard** a főképernyő, ahol gyors áttekintést kapsz a jelenlegi áll
 
 ## 2. Workout (Edzés) indítása és Rutinok kezelése
 
-A **Workout** fülön (alsó navigáció) választhatsz, hogyan szeretnél mozogni:
+A **Workout** fülön (alsó navigáció) minden egy képernyőről indul:
 
-- **Start Empty Workout (Üres edzés indítása)**: Nincs fix terv – ott helyben állítod össze a gyakorlatokat.
-- **My Routines (Saját rutinok)**: Az általad létrehozott sablonok. Kattints a kártya **„Start Routine”** gombjára az indításhoz. Indításkor – ha az előző alkalomhoz képest van hova fejlődni – felugrik a **progresszív túlterhelés** ablak, ami gyakorlatonként javasol +1 ismétlést vagy +súlyt; jelöld ki, amit el akarsz fogadni, vagy vesd el. Ez a **Beállítások → Edzés** menüben kikapcsolható (alapból be van kapcsolva), és deload heteken automatikusan kimarad.
-- **QR kódos importálás/exportálás**: A rutinlista feletti **QR ikonnal** olvashatsz be mások által megosztott terveket. Saját rutinjaidat a kártya három pont (⋯) menüjében a **Share via QR** opcióval oszthatod meg. A szerializáció adat-agnosztikus, így a teljesen egyedi, saját gyakorlataid is gond nélkül átkerülnek.
-- **Manage Rotations (Rotációk kezelése)**: A jobb felső **rotáció ikonnal** (körkörös nyilak) csoportosíthatod a körbejárt rutinjaidat.
-  - **Create Rotation (Rotáció létrehozása)**: Adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
-  - **Active Rotation (Aktív rotáció)**: Ha kiválasztasz egy rotációt, a dashboard **Next Mission** widgetjében már csak az ahhoz tartozó rutinok forognak.
+- **Fejléc**: a hét egy pillantásra (hét pont, zöld a már edzett napokon, a mai nap kiemelt gyűrűvel), alatta az **edzésblokk** vékony haladás-sávként, vagy egy halk „Nincs aktív edzésblokk" sor **Tervezés** gombbal, ha nem fut blokk.
+- **Mai terv**: a következő rutin, amit az aktív rotációból a legrégebben edzett alapján választ az app. Az **Indítás** azonnal elindítja, a kártyára koppintva az előnézet nyílik.
+- **Gyors műveletek**: **Új rutin**, **Felfedezés** és **QR olvasó** gomb, a kártyákkal azonos szürkében. A lebegő **Üres edzés** gomb (jobb alul) terv nélküli edzést indít; görgetéskor ikonná húzódik össze.
+- **A rutinjaid**, rotációk szerint csoportosítva. Az aktív rotáció nyitva van és jelölt, a többi összecsukva. Minden sor mutatja a rutin nevét, a hosszát és hogy mikor edzetted utoljára, valamint egy kis **„pihent" / „még pihen"** gombot (az utolsó 48 óra alapján). Nyomd hosszan, és fölötte egy testtérkép nő ki, ami az ujjad felengedésekor eltűnik: amit a rutin nem dolgoztat, az szürke marad, amit igen, az a főoldali hőtérkép színeit kapja (piros: most edzett, sárga: félúton, zöld: pihent). A következő rutin kiemelt keretet kap.
+- **Rutin előnézet**: bármelyik rutinra koppintva előbb megnézheted a gyakorlatokat (sorozat × ismétlés és az utolsó súlyod), mielőtt bármi elindulna. Itt választhatod ki, **mennyi időd van ma** (30 / 45 / 60), és az előnézet mutatja, hogyan rövidül az edzés: először a sorozatok csökkennek, aztán az utolsó gyakorlatok szuperszettbe kerülnek párban, és csak végső esetben marad ki egy gyakorlat, de soha olyan, amelyik az adott edzésben az egyetlen munka egy izomcsoportnak. A **Rutin indítása** elindítja; a **szerkesztés**, a **megosztás QR kóddal** és a **törlés** a felső ikonok. Indításkor – ha az előző alkalomhoz képest van hova fejlődni – felugrik a **progresszív túlterhelés** ablak, ami gyakorlatonként javasol +1 ismétlést vagy +súlyt; jelöld ki, amit el akarsz fogadni, vagy vesd el. Ez a **Beállítások → Edzés** menüben kikapcsolható (alapból be van kapcsolva), és deload heteken automatikusan kimarad.
+- **QR kódos importálás/exportálás**: A **QR olvasó** gombbal olvashatsz be mások által megosztott terveket. Saját rutinodat a rutin előnézetéből oszthatod meg. A szerializáció adat-agnosztikus, így a teljesen egyedi, saját gyakorlataid is gond nélkül átkerülnek.
+- **Rotációk kezelése**: A lista alatti **Rotációk kezelése** gombbal csoportosíthatod a körbejárt rutinjaidat.
+  - **Rotáció létrehozása**: Adj neki nevet, és válaszd ki, mely rutinok tartozzanak bele.
+  - **Aktív rotáció**: Ha kiválasztasz egy rotációt, a **Mai terv** és a dashboard **Next Mission** widgetjében már csak az ahhoz tartozó rutinok forognak.
+- **Első indulás**: ha még nincs rutinod, a fül három kész rutint kínál egy koppintásos hozzáadásra.
+- **Új edzés indítása**, amikor már fut egy, előbb rákérdez. A biztonságos válasz, a **Mégse** a hangsúlyos gomb; az **Új edzés indítása** eldobja a futót.
 - **New Routine (Új rutin)**: Új, elmenthető edzésterv a **Routine Editor**-ban (gyakorlatok, alapértelmezett ismétlésszám, szuperszettek).
 - **Explore Routines (Rutinok felfedezése)**: Kétfüles képernyő. Az egyik fülön gyárilag összeállított tervek (Push-Pull-Legs, Full Body, …), amiket az **„Add to my routines”** gombbal menthetsz – ezek csak ideiglenes kitöltők, nem tökéletes programok. A másik fül az **AI Workout Generator** (lásd 8. pont).
 - **Training Block**: Megnyitja a periodizáció-tervezőt (lásd 9. pont).
@@ -110,7 +115,7 @@ Koppints a jobb felső trófea ikonra a Dashboardon (vagy a Hadjárat widgetre) 
 - **E heti ostrom**: minden hét egy roham egy vár ellen. A vár HP-ja a saját, közelmúltbeli heti volumencélod, így a vár **mérete** is ehhez igazodik – kisebb célnál egy szerény őrposzt vagy erőd, nagy célnál egy teljes, tornyos Citadella. Edzés közbeni volumennel sebzed: 50%-nál áttöröd a kaput, 100%-nál beveszed a várat, 150%-nál elsöprő győzelmet aratsz (a vár fehér zászlót tűz ki). A falak és tornyok láthatóan omlanak a haladásoddal, sosem ugyanúgy kétszer.
 - **Heti küldetések**: minden héten 3 forgó kihívás egy 12 elemű készletből (edzz N-szer, dönts meg egy rekordot, teljesíts egy volumen- vagy szettcélt, eddz több izomcsoportot, egy hosszú edzés, korai heti edzés, sokféle gyakorlat, hétvégi edzés, két edzés egy napon, egy kardió gyakorlat). Mindhárom teljesítése bónusz XP-t ad.
 - **Liga és szezon**: egy szezon egy naptári hónap. A liga-pontszámod a konzisztenciából jön – edzések, aktív hetek és szériád, nem a nyers erő –, így kezdőknek is fair marad. Emelkedj Réztől Bronzon, Ezüstön, Aranyon, Platinán át egészen Gyémántig. Koppints a Liga kártyára a teljes ranglétráért, ami megmutatja, mennyire vagy az egyes szintektől.
-- **Jelvények**: 62 kitüntetés, nehézség szerint Bronztól Gyémántig rendezve, szintenként színezve, 3 oszlopos rácsban, mindegyiken az általa feloldott avatar ikonjával (lásd 11. pont). Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
+- **Jelvények**: 63 kitüntetés, nehézség szerint Bronztól Gyémántig rendezve, szintenként színezve, 3 oszlopos rácsban, mindegyiken az általa feloldott avatar ikonjával (lásd 11. pont). Koppints bármelyikre, hogy pontosan lásd, mi kell a megszerzéséhez.
 - **Értesítések**: push értesítés érkezik ligalépéskor, minden heti küldetés teljesítésekor és új jelvénynél. Kikapcsolható: **Beállítások → Emlékeztetők → Hadjárat értesítések**.
 
 ---
@@ -122,7 +127,7 @@ A **Profile** fülön:
 - **Recent Workouts Volume Chart**: oszlopdiagram az elmúlt edzések összesített volumenéről, hogy lásd, nő-e a terhelésed.
 - **Workouts**: megnyitja a teljes **Workout Log**-ot. Kattints egy korábbi edzésre a részletekért, majd az **AI Evaluation** gombbal kérj utólagos részletes elemzést arról az edzésről (az app nyelvén).
 - **Calendar**: naptár nézetben böngészheted a múltat; a ponttal jelölt napokon volt edzésed, a mai nap körvonalazva van.
-- **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, vagy használd a **Copy workout** / **Save as routine** funkciókat az újrahasznosításhoz.
+- **Recent Workouts lista**: az utolsó edzéseid kártyái – kattints a részletekért, a kártyán a **másolás ikonnal** új edzést indíthatsz belőle (a túlterhelés-javaslat is felajánlódik, így nem ugyanazt ismételed), vagy nyisd meg és használd a **Save as routine** funkciót.
 - **Settings (Beállítások)** (fogaskerék ikon): kártyákra bontott képernyő:
   - **Appearance**: név, a barátoknak látszó avatar és keret, app nyelve, **megjelenés (Rendszer, Világos vagy Sötét)**, és a téma színe (**Piros, Sárga, Zöld, Kék, Lila**).
   - **Edzés (Workout)**: a **progresszív túlterhelés javaslat** kapcsolója (alapból be).
